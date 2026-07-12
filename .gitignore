@@ -1,0 +1,22 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Ll]ogs/
+
+# Build files
+[Bb]uild/
+[Bb]uilds/
+
+# IDE files
+.vscode/
+.idea/
+.vs/
+
+# macOS files
+.DS_Store
+
+# Visual Studio generated files
+*.csproj
+*.sln
+*.user
+
