@@ -18,5 +18,11 @@
 # Visual Studio generated files
 *.csproj
 *.sln
+*.suo
+*.tmp
 *.user
+*.userprefs
+*.pidb
+*.booproj
+*.unityproj
 
