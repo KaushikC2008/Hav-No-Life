@@ -77,6 +77,74 @@ public class CombatManager : MonoBehaviour
         StartCoroutine(PlayerAttackRoutine());
     }
 
+    public void FireBall()
+    {
+        if (state != BattleState.PlayerTurn)
+        return;
+
+        if (player.GetCurrentMana() < 5)
+        {
+            Debug.Log("Not enough mana to cast Fireball!");
+            return;
+        }
+
+        StartCoroutine(FireBallRoutine());
+    }
+
+    private IEnumerator FireBallRoutine()
+    {
+        state = BattleState.Busy;
+        SetPlayerControls(false);
+
+        player.data.currentManaPoints -= 5;
+        playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
+
+        player.CastFireBall(); 
+        
+        yield return new WaitForSeconds(0.5f); 
+
+        enemy.TakeDamage(player.data.attack + 2);
+        enemyHealthText.text = $"HP: {enemy.GetCurrentHP()}/{enemy.data.maxHealth}";
+
+        yield return new WaitForSeconds(0.5f);
+
+        if (enemy.GetCurrentHP() <= 0)
+        {
+            yield return StartCoroutine(HandleEnemyDeath());
+            yield break;
+        }
+
+        StartCoroutine(EnemyTurn());
+    }
+
+    public void Focus()
+    {
+        if (state != BattleState.PlayerTurn)
+            return;
+
+        if (player.GetCurrentMana() >= player.data.maxManaPoints)
+        {
+            Debug.Log("Player's mana is already full!");
+            return;
+        }
+
+        StartCoroutine(FocusRoutine());
+    }
+
+    private IEnumerator FocusRoutine()
+    {
+        state = BattleState.Busy;
+        SetPlayerControls(false);
+
+        player.Focus();
+        Debug.Log($"Player focused! Current Mana: {player.GetCurrentMana()}/{player.data.maxManaPoints}");
+        playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
+
+        yield return new WaitForSeconds(0.75f);
+
+        StartCoroutine(EnemyTurn());
+    }
+
     private IEnumerator PlayerAttackRoutine()
     {
         state = BattleState.Busy;
@@ -92,34 +160,7 @@ public class CombatManager : MonoBehaviour
         enemyHealthText.text = $"HP: {enemy.GetCurrentHP()}/{enemy.data.maxHealth}";
         if (enemy.GetCurrentHP() <= 0)
         {
-            state = BattleState.Won;
-            SetPlayerControls(false);
-            Debug.Log("Player wins!");
-            GameManager.Instance.DefeatEnemy(GameManager.Instance.CurrentEnemyID);
-
-            bool leveledUp = GameManager.Instance.GainXP(enemy.data.xpReward);
-            GameManager.Instance.GainGold(enemy.data.goldReward);
-
-            levelUpPanel.SetActive(true);
-
-            if (leveledUp)
-            {
-                levelUpPanel.SetActive(true);
-                levelUpTitleText.text = $"Level Up! You are now Level {GameManager.Instance.PlayerData.currentLevel}!";
-                levelUpStatsText.text = $"Gained {enemy.data.xpReward} XP & {enemy.data.goldReward} Gold!\n\n" +
-                                        $"Max HP: {GameManager.Instance.PlayerData.maxHealth}\n" +
-                                        $"Attack: {GameManager.Instance.PlayerData.attack}\n" +
-                                        $"Defense: {GameManager.Instance.PlayerData.defense}";
-                yield return new WaitForSeconds(3.5f); 
-            }
-            else
-            {
-                levelUpTitleText.text = "Victory!";
-                levelUpStatsText.text = $"Gained {enemy.data.xpReward} XP\n" +
-                                        $"Gained {enemy.data.goldReward} Gold";
-                yield return new WaitForSeconds(2.5f);
-            }
-            SceneTransition.instance.LoadScene("Tutorial Scene");
+            StartCoroutine(HandleEnemyDeath());
             yield break;
         }
         yield return new WaitForSeconds(0.5f);
@@ -197,7 +238,7 @@ public class CombatManager : MonoBehaviour
         {
             player.transform.localScale = new Vector3(1, 1, 1);
         }
-}
+    }
 
     private IEnumerator EnemyMoveToPosition(Vector3 target, bool flipEnemy)
     {
@@ -236,6 +277,37 @@ public class CombatManager : MonoBehaviour
         {
             enemy.transform.localScale = new Vector3(-1, 1, 1);
         }
+    }
+
+    private IEnumerator HandleEnemyDeath()
+    {
+        state = BattleState.Won;
+        SetPlayerControls(false);
+        Debug.Log("Player wins!");
+        GameManager.Instance.DefeatEnemy(GameManager.Instance.CurrentEnemyID);
+
+        bool leveledUp = GameManager.Instance.GainXP(enemy.data.xpReward);
+        GameManager.Instance.GainGold(enemy.data.goldReward);
+
+        levelUpPanel.SetActive(true);
+
+        if (leveledUp)
+        {
+            levelUpTitleText.text = $"Level Up! You are now Level {GameManager.Instance.PlayerData.currentLevel}!";
+            levelUpStatsText.text = $"Gained {enemy.data.xpReward} XP & {enemy.data.goldReward} Gold!\n\n" +
+                                    $"Max HP: {GameManager.Instance.PlayerData.maxHealth}\n" +
+                                    $"Attack: {GameManager.Instance.PlayerData.attack}\n" +
+                                    $"Defense: {GameManager.Instance.PlayerData.defense}";
+            yield return new WaitForSeconds(3.5f); 
+        }
+        else
+        {
+            levelUpTitleText.text = "Victory!";
+            levelUpStatsText.text = $"Gained {enemy.data.xpReward} XP\n" +
+                                    $"Gained {enemy.data.goldReward} Gold";
+            yield return new WaitForSeconds(2.5f);
+        }
+        SceneTransition.instance.LoadScene("Tutorial Scene");
     }
 
 }

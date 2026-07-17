@@ -20,6 +20,24 @@ public class PlayerCharacter : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
+    public void Focus()
+    {
+        if (data.currentManaPoints + 1/2 * data.maxManaPoints > data.maxManaPoints)
+        {
+            data.currentManaPoints = data.maxManaPoints;
+        } else
+        {
+            data.currentManaPoints += 1/2 * data.maxManaPoints;
+        }
+        //animator.SetTrigger("Focus");
+    }
+
+    public void CastFireBall()
+    {
+        Debug.Log("Casting Fireball");
+        //animator.SetTrigger("CastFireBall");
+    }
+
     public void PlayHit()
     {
         animator.SetTrigger("Hit");
