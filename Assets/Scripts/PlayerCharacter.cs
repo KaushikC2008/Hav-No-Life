@@ -7,6 +7,8 @@ public class PlayerCharacter : MonoBehaviour
     public Animator animator;
     public PlayerData data;
 
+    private bool isDefending = false;
+
     public void Setup()
     {
         if (GameManager.Instance != null)
@@ -22,12 +24,14 @@ public class PlayerCharacter : MonoBehaviour
 
     public void Focus()
     {
-        if (data.currentManaPoints + 1/2 * data.maxManaPoints > data.maxManaPoints)
+        int manaToAdd = data.maxManaPoints / 2;
+
+        if (data.currentManaPoints + manaToAdd > data.maxManaPoints)
         {
             data.currentManaPoints = data.maxManaPoints;
         } else
         {
-            data.currentManaPoints += 1/2 * data.maxManaPoints;
+            data.currentManaPoints += manaToAdd;
         }
         //animator.SetTrigger("Focus");
     }
@@ -43,9 +47,23 @@ public class PlayerCharacter : MonoBehaviour
         animator.SetTrigger("Hit");
     }
 
+    public void Defend()
+    {
+        isDefending = true;
+        Debug.Log("🛡️ Defense stance activated! Defense tripled for the next attack.");
+        // animator.SetTrigger("Defend"); // (Optional) Add defense animation trigger here later!
+    }
+
     public void TakeDamage(int dmg)
     {
-        data.currentHealth -= dmg;
+        int effectiveDefense = isDefending ? (data.defense * 3) : data.defense;
+        int actualDamage = Mathf.Max(0, dmg - effectiveDefense);
+
+        Debug.Log($"Enemy hit for {dmg} raw damage. Defense absorbed {effectiveDefense}. Took {actualDamage} actual damage!");
+        
+        data.currentHealth -= actualDamage;
+
+        isDefending = false;
         if (data.currentHealth <= 0)
         {
             data.currentHealth = 0;

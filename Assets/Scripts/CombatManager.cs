@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 using Unity.VisualScripting;
 
 public class CombatManager : MonoBehaviour
@@ -145,6 +146,26 @@ public class CombatManager : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
+    public void Defend()
+    {
+        if (state != BattleState.PlayerTurn)
+            return;
+
+        StartCoroutine(DefendRoutine());
+    }
+
+    private IEnumerator DefendRoutine()
+    {
+        state = BattleState.Busy;
+        SetPlayerControls(false);
+
+        player.Defend();
+
+        yield return new WaitForSeconds(0.75f);
+
+        StartCoroutine(EnemyTurn());
+    }
+
     private IEnumerator PlayerAttackRoutine()
     {
         state = BattleState.Busy;
@@ -174,31 +195,81 @@ public class CombatManager : MonoBehaviour
     {
         state = BattleState.EnemyTurn;
         yield return new WaitForSeconds(1f);
-        Vector3 enemyAttackPosition = player.transform.position + Vector3.right * (attackDistance);
-        yield return StartCoroutine(EnemyMoveToPosition(enemyAttackPosition,false));
-        enemy.StopRun();
-        enemy.PlayAttack();
-        yield return new WaitForSeconds(0.5f);
-        player.TakeDamage(enemy.data.attack);
-        playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
+
+        if (enemy.GetCurrentMana() < enemy.data.specialAttackCost && Random.value < 0.6f)
+        {
+            yield return StartCoroutine(EnemyFocusRoutine());
+        }
+        else if (enemy.GetCurrentMana() >= enemy.data.specialAttackCost && Random.value < 0.7f)
+        {
+            yield return StartCoroutine(EnemySpecialRoutine());
+        }
+        else
+        {
+            yield return StartCoroutine(EnemyBasicAttackRoutine());
+        }
+
         if (player.GetCurrentHealth() <= 0)
         {
             state = BattleState.Lost;
             SetPlayerControls(false);
             Debug.Log("Player lost!");
-            yield break;
         }
+        else
+        {
+            state = BattleState.PlayerTurn;
+            SetPlayerControls(true);
+        }
+    }
+
+    private IEnumerator EnemyBasicAttackRoutine()
+    {
+        Debug.Log($"⚔️ {enemy.data.enemyName} uses a Basic Attack!");
+        Vector3 enemyAttackPosition = player.transform.position + Vector3.right * (attackDistance);
+        yield return StartCoroutine(EnemyMoveToPosition(enemyAttackPosition, false));
+        
+        enemy.StopRun();
+        enemy.PlayAttack();
         yield return new WaitForSeconds(0.5f);
-        yield return StartCoroutine(EnemyMoveToPosition(startEnemyPosition,true));
+        
+        player.TakeDamage(enemy.data.attack);
+        playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
+        
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(EnemyMoveToPosition(startEnemyPosition, true));
         enemy.StopRun();
         yield return new WaitForSeconds(0.5f);
-        state = BattleState.PlayerTurn;
-        SetPlayerControls(true);
+    }
+
+    private IEnumerator EnemySpecialRoutine()
+    {
+        Debug.Log($"🔥 {enemy.data.enemyName} casts a Special Spell!");
+        
+        enemy.SpendMana(enemy.data.specialAttackCost);
+        
+        enemy.PlayAttack(); // Change this when make new Animation for special attack
+        
+        yield return new WaitForSeconds(0.5f);
+        
+        player.TakeDamage(enemy.data.specialAttackDamage);
+        playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
+        
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator EnemyFocusRoutine()
+    {
+        enemy.Focus();
+        yield return new WaitForSeconds(0.75f);
     }
 
     private void SetPlayerControls(bool enabled)
     {
-        attackPanel.SetActive(enabled);
+        Button[] buttons = attackPanel.GetComponentsInChildren<Button>();
+        foreach (Button btn in buttons)
+        {
+            btn.interactable = enabled;
+        }
     }
 
     private IEnumerator PlayerMoveToPosition(Vector3 target, bool flipPlayer)

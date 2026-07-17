@@ -8,19 +8,53 @@ public class EnemyCharacter : MonoBehaviour
     public EnemyData data;
 
     private int currentHP;
+    private int currentMana;
 
     public void Setup(EnemyData newData)
     {
         data = newData;
         animator.runtimeAnimatorController = data.animatorController;
         currentHP = data.maxHealth;
+        currentMana = data.maxManaPoints;
+    }
+
+    public void Focus()
+    {
+        int manaToAdd = data.maxManaPoints / 2;
+        if (currentMana + manaToAdd > data.maxManaPoints)
+        {
+            currentMana = data.maxManaPoints;
+        }
+        else
+        {
+            currentMana += manaToAdd;
+        }
+        Debug.Log($"🧠 {data.enemyName} focused! Regenerated mana to {currentMana}/{data.maxManaPoints}");
+        // animator.SetTrigger("Focus");
+    }
+
+    public void SpendMana(int amount)
+    {
+        currentMana -= amount;
+    }
+
+    public int GetCurrentMana()
+    {
+        return currentMana;
     }
 
     public void TakeDamage(int dmg)
     {
-        currentHP -= dmg;
+        int actualDamage = Mathf.Max(0, dmg - data.defense);
+        int displayedAbsorption = Mathf.Min(dmg, data.defense);
+
+        Debug.Log($"Hit {data.enemyName} for {dmg} raw damage. Enemy defense absorbed {displayedAbsorption}. Dealt {actualDamage} actual damage!");
+
+
+        currentHP -= actualDamage;
         if (currentHP <= 0)
         {
+            currentHP = 0;
             animator.SetTrigger("Die");
         }
         else

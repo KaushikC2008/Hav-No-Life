@@ -24,4 +24,9 @@ public class EnemyData : ScriptableObject
     [Header("Position")]
     public Vector2 combatPosition;
     public Vector2 playerCombatOffset = new Vector2(-2f, 0f);
+
+    [Header("Mana & Spells")]
+    public int maxManaPoints;
+    public int specialAttackCost;
+    public int specialAttackDamage => Mathf.RoundToInt(attack * 1.5f); // Example: Special attack deals 1.5x base attack damage
 }
