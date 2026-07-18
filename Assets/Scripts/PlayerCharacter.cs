@@ -51,7 +51,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         isDefending = true;
         Debug.Log("🛡️ Defense stance activated! Defense tripled for the next attack.");
-        // animator.SetTrigger("Defend"); // (Optional) Add defense animation trigger here later!
+        animator.SetTrigger("Defend");
     }
 
     public void TakeDamage(int dmg)
