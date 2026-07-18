@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Woody
   combatSprite: {fileID: -2035548913, guid: 1f86815f018274f83a93140d1ec783f7, type: 3}
   maxHealth: 15
-  attack: 10
+  attack: 15
   defense: 10
   speed: 10
   xpReward: 30
@@ -24,3 +24,5 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: cbb4964db3f4c49748a20665e6967e4c, type: 2}
   combatPosition: {x: 7.4, y: -2.1}
   playerCombatOffset: {x: 2, y: 0}
+  maxManaPoints: 15
+  specialAttackCost: 7

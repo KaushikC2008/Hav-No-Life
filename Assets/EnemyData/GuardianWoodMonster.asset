@@ -15,8 +15,8 @@ MonoBehaviour:
   enemyName: Guardian
   combatSprite: {fileID: 1123123907, guid: 33239f6eebb6a47b0b3b586ba989437f, type: 3}
   maxHealth: 20
-  attack: 20
-  defense: 15
+  attack: 30
+  defense: 10
   speed: 20
   xpReward: 45
   goldReward: 20
@@ -24,3 +24,5 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: 8c9823bb23a6d4322a5db7f167c4cf48, type: 2}
   combatPosition: {x: 8, y: -1.4}
   playerCombatOffset: {x: 2, y: 0}
+  maxManaPoints: 20
+  specialAttackCost: 7

@@ -33,7 +33,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             data.currentManaPoints += manaToAdd;
         }
-        //animator.SetTrigger("Focus");
+        animator.SetTrigger("Focus");
     }
 
     public void CastFireBall()

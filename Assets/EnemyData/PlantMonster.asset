@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Twin Snare
   combatSprite: {fileID: -1683811571, guid: 1ec690daa56064a56897b0189448c4e2, type: 3}
   maxHealth: 10
-  attack: 10
+  attack: 20
   defense: 10
   speed: 10
   xpReward: 25
@@ -24,3 +24,5 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: aed1b39ae80e6456aba0a38434e742ba, type: 2}
   combatPosition: {x: 7.5, y: -1.8}
   playerCombatOffset: {x: 2.5, y: 0}
+  maxManaPoints: 10
+  specialAttackCost: 5

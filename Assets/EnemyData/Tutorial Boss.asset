@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Lizrd
   combatSprite: {fileID: 21300000, guid: e009d798d466d4aaf97a3a6078ae2c4b, type: 3}
   maxHealth: 50
-  attack: 20
+  attack: 40
   defense: 15
   speed: 15
   xpReward: 200
@@ -24,3 +24,5 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: cd44ad93f45a14c4d97082fa8a5f047b, type: 2}
   combatPosition: {x: 6.57, y: -1.1}
   playerCombatOffset: {x: 5, y: 0}
+  maxManaPoints: 30
+  specialAttackCost: 15

@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Player
   combatSprite: {fileID: -863821437, guid: f0c03546cb5c84c3a93899030f3151ed, type: 3}
+  currentLevel: 1
+  currentXP: 0
+  xpToNextLevel: 100
+  currentGold: 0
   maxHealth: 100
   maxManaPoints: 10
-  attack: 5
+  currentHealth: 0
+  currentManaPoints: 0
+  attack: 20
   defense: 10
   speed: 10
