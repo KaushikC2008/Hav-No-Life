@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         PlayerData.maxHealth += 10;
         PlayerData.maxManaPoints += 10;
         PlayerData.currentHealth = PlayerData.maxHealth;
-        PlayerData.currentManaPoints += PlayerData.maxManaPoints;
+        PlayerData.currentManaPoints = PlayerData.maxManaPoints;
         PlayerData.attack += 5;
         PlayerData.defense += 2;
         PlayerData.speed += 5;
