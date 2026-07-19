@@ -217,6 +217,7 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
+            player.SetDefending(false);
             state = BattleState.PlayerTurn;
             SetPlayerControls(true);
         }

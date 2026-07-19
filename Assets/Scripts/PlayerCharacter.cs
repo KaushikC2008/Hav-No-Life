@@ -54,6 +54,11 @@ public class PlayerCharacter : MonoBehaviour
         animator.SetTrigger("Defend");
     }
 
+    public void SetDefending(bool defending)
+    {
+        isDefending = defending;
+    }
+
     public void TakeDamage(int dmg)
     {
         int effectiveDefense = isDefending ? (data.defense * 3) : data.defense;
