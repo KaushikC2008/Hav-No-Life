@@ -10,6 +10,8 @@ public class EnemyCharacter : MonoBehaviour
     private int currentHP;
     private int currentMana;
 
+    public CombatManager combatManager;
+
     public void Setup(EnemyData newData)
     {
         data = newData;
@@ -29,7 +31,10 @@ public class EnemyCharacter : MonoBehaviour
         {
             currentMana += manaToAdd;
         }
-        Debug.Log($"🧠 {data.enemyName} focused! Regenerated mana to {currentMana}/{data.maxManaPoints}");
+        if (combatManager != null)
+        {
+            combatManager.LogMessage($"🧠 {data.enemyName} focused! Regenerated mana to {currentMana}/{data.maxManaPoints}");
+        }
         // animator.SetTrigger("Focus");
     }
 
@@ -48,8 +53,10 @@ public class EnemyCharacter : MonoBehaviour
         int actualDamage = Mathf.Max(0, dmg - data.defense);
         int displayedAbsorption = Mathf.Min(dmg, data.defense);
 
-        Debug.Log($"Hit {data.enemyName} for {dmg} raw damage. Enemy defense absorbed {displayedAbsorption}. Dealt {actualDamage} actual damage!");
-
+        if (combatManager != null)
+        {
+            combatManager.LogMessage($"Hit {data.enemyName} for {dmg} raw damage. Enemy defense absorbed {displayedAbsorption}. Dealt {actualDamage} actual damage!");
+        }
 
         currentHP -= actualDamage;
         if (currentHP <= 0)

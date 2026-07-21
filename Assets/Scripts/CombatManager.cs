@@ -3,6 +3,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class CombatManager : MonoBehaviour
 {
@@ -32,12 +33,24 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private GameObject levelUpPanel;
     [SerializeField] private TextMeshProUGUI levelUpTitleText;
     [SerializeField] private TextMeshProUGUI levelUpStatsText;
+    [SerializeField] private GameObject gameOverPanel;
+
+    [Header("Combat Log UI")]
+    [SerializeField] private Transform logContentParent;
+    [SerializeField] private GameObject logTextPrefab;
+    [SerializeField] private ScrollRect combatLogScrollRect;
+
+    [Header("Turn Indicator UI")]
+    [SerializeField] private Image turnBannerImage;
+    [SerializeField] private Sprite playerTurnSprite;
+    [SerializeField] private Sprite enemyTurnSprite;
 
     private BattleState state;
 
     void Start()
     {
         player.Setup();
+        player.combatManager = this;
         playerStartPosition = player.transform.position;
 
         if (GameManager.Instance != null && GameManager.Instance.CurrentEnemy != null)
@@ -51,6 +64,7 @@ public class CombatManager : MonoBehaviour
     void SetupBattle(EnemyData data)
     {
         enemy.Setup(data);
+        enemy.combatManager = this;
         enemyNameText.text = data.enemyName;
         enemyHealthText.text = $"HP: {data.maxHealth}/{data.maxHealth}";
         playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
@@ -58,6 +72,7 @@ public class CombatManager : MonoBehaviour
         startEnemyPosition = data.combatPosition;
         attackDistance = data.playerCombatOffset.x;
 
+        if (combatLogScrollRect != null) combatLogScrollRect.enabled = true;
 
         if (enemyWorldSpriteRenderer != null && data.combatSprite != null)
         {
@@ -66,6 +81,7 @@ public class CombatManager : MonoBehaviour
             enemyWorldSpriteRenderer.transform.position = data.combatPosition;
         }
         state = BattleState.PlayerTurn;
+        UpdateTurnBanner(true);
     }
 
     public void BasicAttack()
@@ -85,7 +101,7 @@ public class CombatManager : MonoBehaviour
 
         if (player.GetCurrentMana() < 5)
         {
-            Debug.Log("Not enough mana to cast Fireball!");
+            LogMessage("Not enough mana to cast Fireball!");
             return;
         }
 
@@ -125,7 +141,7 @@ public class CombatManager : MonoBehaviour
 
         if (player.GetCurrentMana() >= player.data.maxManaPoints)
         {
-            Debug.Log("Player's mana is already full!");
+            LogMessage("Player's mana is already full!");
             return;
         }
 
@@ -138,7 +154,7 @@ public class CombatManager : MonoBehaviour
         SetPlayerControls(false);
 
         player.Focus();
-        Debug.Log($"Player focused! Current Mana: {player.GetCurrentMana()}/{player.data.maxManaPoints}");
+        LogMessage($"Player focused! Current Mana: {player.GetCurrentMana()}/{player.data.maxManaPoints}");
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
 
         yield return new WaitForSeconds(0.75f);
@@ -194,6 +210,7 @@ public class CombatManager : MonoBehaviour
     private IEnumerator EnemyTurn()
     {
         state = BattleState.EnemyTurn;
+        UpdateTurnBanner(false);
         yield return new WaitForSeconds(1f);
 
         if (enemy.GetCurrentMana() < enemy.data.specialAttackCost && Random.value < 0.6f)
@@ -211,21 +228,20 @@ public class CombatManager : MonoBehaviour
 
         if (player.GetCurrentHealth() <= 0)
         {
-            state = BattleState.Lost;
-            SetPlayerControls(false);
-            Debug.Log("Player lost!");
+            StartCoroutine(HandlePlayerDeath());
         }
         else
         {
             player.SetDefending(false);
             state = BattleState.PlayerTurn;
             SetPlayerControls(true);
+            UpdateTurnBanner(true);
         }
     }
 
     private IEnumerator EnemyBasicAttackRoutine()
     {
-        Debug.Log($"⚔️ {enemy.data.enemyName} uses a Basic Attack!");
+        LogMessage($"⚔️ {enemy.data.enemyName} uses a Basic Attack!");
         Vector3 enemyAttackPosition = player.transform.position + Vector3.right * (attackDistance);
         yield return StartCoroutine(EnemyMoveToPosition(enemyAttackPosition, false));
         
@@ -244,7 +260,7 @@ public class CombatManager : MonoBehaviour
 
     private IEnumerator EnemySpecialRoutine()
     {
-        Debug.Log($"🔥 {enemy.data.enemyName} casts a Special Spell!");
+        LogMessage($"🔥 {enemy.data.enemyName} casts a Special Spell!");
         
         enemy.SpendMana(enemy.data.specialAttackCost);
         
@@ -355,7 +371,8 @@ public class CombatManager : MonoBehaviour
     {
         state = BattleState.Won;
         SetPlayerControls(false);
-        Debug.Log("Player wins!");
+        if (turnBannerImage != null) turnBannerImage.gameObject.SetActive(false);
+        LogMessage("Player wins!");
         GameManager.Instance.DefeatEnemy(GameManager.Instance.CurrentEnemyID);
 
         bool leveledUp = GameManager.Instance.GainXP(enemy.data.xpReward);
@@ -382,6 +399,93 @@ public class CombatManager : MonoBehaviour
         SceneTransition.instance.LoadScene("Tutorial Scene");
     }
 
+    private void UpdateTurnBanner(bool isPlayerTurn)
+    {
+        if (turnBannerImage == null) return;
+        
+        turnBannerImage.gameObject.SetActive(true);
+
+        if (isPlayerTurn)
+        {
+            turnBannerImage.sprite = playerTurnSprite;
+            turnBannerImage.transform.localScale = new Vector3(3f, 3f, 1f);
+        }
+        else
+        {
+            turnBannerImage.sprite = enemyTurnSprite;
+            turnBannerImage.transform.localScale = new Vector3(3f, 2f, 1f);
+        }
+    }
+
+    private IEnumerator HandlePlayerDeath()
+    {
+        state = BattleState.Lost;
+        SetPlayerControls(false);
+        if (turnBannerImage != null) turnBannerImage.gameObject.SetActive(false);
+        
+        LogMessage("💀 Player has fallen! Waiting for animation...");
+
+        if (combatLogScrollRect != null) combatLogScrollRect.enabled = false;
+
+        yield return new WaitForSeconds(2f);
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+    }
+
+    public void RetryBattle()
+    {
+        Debug.Log("🔄 Retrying battle from the start!");
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.PlayerData.currentHealth = GameManager.Instance.PlayerData.maxHealth;
+            GameManager.Instance.PlayerData.currentManaPoints = GameManager.Instance.PlayerData.maxManaPoints;
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ReturnToCheckpoint()
+    {
+        Debug.Log("🏃 Retreating to the latest checkpoint!");
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.PlayerData.currentHealth = GameManager.Instance.PlayerData.maxHealth;
+        }
+
+        SceneTransition.instance.LoadScene("Tutorial Scene");
+    }
+
+    public void LogMessage(string message)
+    {
+        Debug.Log(message);
+
+        if (logContentParent != null && logTextPrefab != null)
+        {
+            GameObject newLog = Instantiate(logTextPrefab, logContentParent);
+            TextMeshProUGUI logText = newLog.GetComponent<TextMeshProUGUI>();
+            if (logText != null)
+            {
+                logText.text = message;
+            }
+
+            StartCoroutine(ScrollToBottomRoutine());
+        }
+    }
+
+    private IEnumerator ScrollToBottomRoutine()
+    {
+        yield return null; 
+
+        if (combatLogScrollRect != null)
+        {
+            combatLogScrollRect.verticalNormalizedPosition = 0f;
+        }
+    }
 }
 
 public enum BattleState

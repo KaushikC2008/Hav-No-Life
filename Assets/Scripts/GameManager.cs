@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class GameManager : MonoBehaviour
     [Header("Player")]
     public PlayerData PlayerData;
     
-    //Enemy
     public EnemyData CurrentEnemy { get; private set; }
     public List<string> DefeatedEnemies = new List<string>();
     public string CurrentEnemyID;

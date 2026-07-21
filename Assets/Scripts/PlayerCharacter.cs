@@ -7,6 +7,8 @@ public class PlayerCharacter : MonoBehaviour
     public Animator animator;
     public PlayerData data;
 
+    public CombatManager combatManager;
+
     private bool isDefending = false;
 
     public void Setup()
@@ -38,7 +40,8 @@ public class PlayerCharacter : MonoBehaviour
 
     public void CastFireBall()
     {
-        Debug.Log("Casting Fireball");
+        if (combatManager != null) 
+            combatManager.LogMessage("🔥 Casting Fireball");
         //animator.SetTrigger("CastFireBall");
     }
 
@@ -50,7 +53,8 @@ public class PlayerCharacter : MonoBehaviour
     public void Defend()
     {
         isDefending = true;
-        Debug.Log("🛡️ Defense stance activated! Defense tripled for the next attack.");
+        if (combatManager != null)
+            combatManager.LogMessage("🛡️ Defense stance activated! Defense tripled for next attack.");
         animator.SetTrigger("Defend");
     }
 
@@ -64,7 +68,8 @@ public class PlayerCharacter : MonoBehaviour
         int effectiveDefense = isDefending ? (data.defense * 3) : data.defense;
         int actualDamage = Mathf.Max(0, dmg - effectiveDefense);
 
-        Debug.Log($"Enemy hit for {dmg} raw damage. Defense absorbed {effectiveDefense}. Took {actualDamage} actual damage!");
+        if(combatManager != null)
+            combatManager.LogMessage($"Enemy hit for {dmg} raw damage. Defense absorbed {effectiveDefense}. Took {actualDamage} actual damage!");
         
         data.currentHealth -= actualDamage;
 
