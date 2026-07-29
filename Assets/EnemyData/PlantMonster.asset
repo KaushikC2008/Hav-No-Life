@@ -22,7 +22,7 @@ MonoBehaviour:
   goldReward: 5
   flipSprite: 1
   animatorController: {fileID: 9100000, guid: aed1b39ae80e6456aba0a38434e742ba, type: 2}
-  combatPosition: {x: 7.5, y: -1.8}
+  combatPosition: {x: 9.6, y: -1.8}
   playerCombatOffset: {x: 2.5, y: 0}
   maxManaPoints: 10
   specialAttackCost: 5

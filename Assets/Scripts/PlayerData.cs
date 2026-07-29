@@ -25,4 +25,9 @@ public class PlayerData : ScriptableObject
     public int attack;
     public int defense;
     public float speed;
+
+    [Header("Overworld & Checkpoints")]
+    public Vector3 overworldReturnPosition; 
+    public Vector3 latestCheckpointPosition;
+    public bool hasCheckpoint = false;
 }

@@ -33,7 +33,7 @@ public class EnemyCharacter : MonoBehaviour
         }
         if (combatManager != null)
         {
-            combatManager.LogMessage($"🧠 {data.enemyName} focused! Regenerated mana to {currentMana}/{data.maxManaPoints}");
+            combatManager.LogMessage($"[FOCUS] {data.enemyName} focused! Regenerated mana to {currentMana}/{data.maxManaPoints}");
         }
         // animator.SetTrigger("Focus");
     }

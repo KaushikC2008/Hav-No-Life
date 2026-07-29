@@ -13,6 +13,7 @@ public class CombatManager : MonoBehaviour
     [Header("Enemy")]
     [SerializeField] private TextMeshProUGUI enemyNameText;
     [SerializeField] private TextMeshProUGUI enemyHealthText;
+    [SerializeField] private TextMeshProUGUI enemyManaText;
     [SerializeField] private EnemyCharacter enemy;
     private Vector3 startEnemyPosition;
 
@@ -67,12 +68,13 @@ public class CombatManager : MonoBehaviour
         enemy.combatManager = this;
         enemyNameText.text = data.enemyName;
         enemyHealthText.text = $"HP: {data.maxHealth}/{data.maxHealth}";
+        enemyManaText.text = $"MP: {data.maxManaPoints}/{data.maxManaPoints}";
         playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
         startEnemyPosition = data.combatPosition;
         attackDistance = data.playerCombatOffset.x;
 
-        if (combatLogScrollRect != null) combatLogScrollRect.enabled = true;
+        if (combatLogScrollRect != null) combatLogScrollRect.gameObject.SetActive(true);
 
         if (enemyWorldSpriteRenderer != null && data.combatSprite != null)
         {
@@ -122,6 +124,7 @@ public class CombatManager : MonoBehaviour
 
         enemy.TakeDamage(player.data.attack + 2);
         enemyHealthText.text = $"HP: {enemy.GetCurrentHP()}/{enemy.data.maxHealth}";
+        enemyManaText.text = $"MP: {enemy.GetCurrentMana()}/{enemy.data.maxManaPoints}";
 
         yield return new WaitForSeconds(0.5f);
 
@@ -241,7 +244,7 @@ public class CombatManager : MonoBehaviour
 
     private IEnumerator EnemyBasicAttackRoutine()
     {
-        LogMessage($"⚔️ {enemy.data.enemyName} uses a Basic Attack!");
+        LogMessage($"[ATTACK] {enemy.data.enemyName} uses a Basic Attack!");
         Vector3 enemyAttackPosition = player.transform.position + Vector3.right * (attackDistance);
         yield return StartCoroutine(EnemyMoveToPosition(enemyAttackPosition, false));
         
@@ -260,7 +263,7 @@ public class CombatManager : MonoBehaviour
 
     private IEnumerator EnemySpecialRoutine()
     {
-        LogMessage($"🔥 {enemy.data.enemyName} casts a Special Spell!");
+        LogMessage($"[SPELL] {enemy.data.enemyName} casts a Special Spell!");
         
         enemy.SpendMana(enemy.data.specialAttackCost);
         
@@ -277,6 +280,7 @@ public class CombatManager : MonoBehaviour
     private IEnumerator EnemyFocusRoutine()
     {
         enemy.Focus();
+        enemyManaText.text = $"MP: {enemy.GetCurrentMana()}/{enemy.data.maxManaPoints}";
         yield return new WaitForSeconds(0.75f);
     }
 
@@ -378,6 +382,13 @@ public class CombatManager : MonoBehaviour
         bool leveledUp = GameManager.Instance.GainXP(enemy.data.xpReward);
         GameManager.Instance.GainGold(enemy.data.goldReward);
 
+        if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
+        {
+            GameManager.Instance.PlayerData.latestCheckpointPosition = GameManager.Instance.LastPlayerPosition;
+            GameManager.Instance.PlayerData.hasCheckpoint = true;
+            Debug.Log($"[Checkpoint] Checkpoint locked in at: {GameManager.Instance.PlayerData.latestCheckpointPosition}");
+        }
+
         levelUpPanel.SetActive(true);
 
         if (leveledUp)
@@ -408,12 +419,12 @@ public class CombatManager : MonoBehaviour
         if (isPlayerTurn)
         {
             turnBannerImage.sprite = playerTurnSprite;
-            turnBannerImage.transform.localScale = new Vector3(3f, 3f, 1f);
+            turnBannerImage.transform.localScale = new Vector3(5f, 5f, 1f);
         }
         else
         {
             turnBannerImage.sprite = enemyTurnSprite;
-            turnBannerImage.transform.localScale = new Vector3(3f, 2f, 1f);
+            turnBannerImage.transform.localScale = new Vector3(5f, 3.5f, 1f);
         }
     }
 
@@ -423,9 +434,9 @@ public class CombatManager : MonoBehaviour
         SetPlayerControls(false);
         if (turnBannerImage != null) turnBannerImage.gameObject.SetActive(false);
         
-        LogMessage("💀 Player has fallen! Waiting for animation...");
+        LogMessage("[DEATH] Player has fallen! Waiting for animation...");
 
-        if (combatLogScrollRect != null) combatLogScrollRect.enabled = false;
+        if (combatLogScrollRect != null) combatLogScrollRect.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(2f);
 
@@ -435,19 +446,6 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    public void RetryBattle()
-    {
-        Debug.Log("🔄 Retrying battle from the start!");
-
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.PlayerData.currentHealth = GameManager.Instance.PlayerData.maxHealth;
-            GameManager.Instance.PlayerData.currentManaPoints = GameManager.Instance.PlayerData.maxManaPoints;
-        }
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void ReturnToCheckpoint()
     {
         Debug.Log("🏃 Retreating to the latest checkpoint!");
@@ -455,6 +453,16 @@ public class CombatManager : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.PlayerData.currentHealth = GameManager.Instance.PlayerData.maxHealth;
+
+            if (GameManager.Instance.PlayerData.hasCheckpoint)
+            {
+                GameManager.Instance.LastPlayerPosition = GameManager.Instance.PlayerData.latestCheckpointPosition;
+                GameManager.Instance.ShouldRestorePosition = true;
+            }
+            else
+            {
+                GameManager.Instance.ShouldRestorePosition = false;
+            }
         }
 
         SceneTransition.instance.LoadScene("Tutorial Scene");
