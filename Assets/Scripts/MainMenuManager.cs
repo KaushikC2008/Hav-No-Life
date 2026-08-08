@@ -22,13 +22,13 @@ public class MainMenuManager : MonoBehaviour
     public void StartNewGame()
     {
         Debug.Log("Starting a fresh New Game!");
-        
+
         if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
         {
             GameManager.Instance.PlayerData.currentHealth = GameManager.Instance.PlayerData.maxHealth;
             GameManager.Instance.PlayerData.currentManaPoints = GameManager.Instance.PlayerData.maxManaPoints;
             GameManager.Instance.PlayerData.hasCheckpoint = false;
-            
+
             GameManager.Instance.ShouldRestorePosition = false;
         }
 
@@ -38,7 +38,7 @@ public class MainMenuManager : MonoBehaviour
     public void ContinueGame()
     {
         Debug.Log("Continuing from latest checkpoint!");
-        
+
         if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
         {
             GameManager.Instance.LastPlayerPosition = GameManager.Instance.PlayerData.latestCheckpointPosition;

@@ -202,7 +202,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c19d4dba4ba964ea693e6934d1ba834a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2aeb6beb50c0a4a6483d376434b17026, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -215,7 +215,7 @@ AnimatorController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PlantMonsterAnimatorCombat
-  serializedVersion: 5
+  serializedVersion: 6
   m_AnimatorParameters:
   - m_Name: Attack
     m_Type: 9
@@ -254,6 +254,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+  m_EvaluateTransitionsOnStart: 0
 --- !u!1101 &3230558530771139714
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -354,7 +355,7 @@ AnimatorState:
   m_TimeParameter: 
 --- !u!1107 &6866190180312367441
 AnimatorStateMachine:
-  serializedVersion: 6
+  serializedVersion: 7
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}

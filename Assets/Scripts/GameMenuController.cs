@@ -5,19 +5,18 @@ public class GameMenuController : MonoBehaviour
 {
     [Header("UI Panels")]
     [SerializeField] private GameObject pauseMenuUI;
-    [SerializeField] private GameObject deathMenuUI;
 
     private bool isPaused = false;
 
     void Start()
     {
         if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
-        if (deathMenuUI != null) deathMenuUI.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && (deathMenuUI == null || !deathMenuUI.activeSelf))
+        // Only trigger pause menu with Escape during normal gameplay
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
@@ -44,23 +43,11 @@ public class GameMenuController : MonoBehaviour
         isPaused = true;
     }
 
-    public void ShowDeathMenu()
-    {
-        if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
-        if (deathMenuUI != null) deathMenuUI.SetActive(true);
-        
-        Time.timeScale = 0f;
-    }
-
-    public void RetryCurrentScene()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
+
+        SaveCurrentPlayerProgress();
         
         if (SceneTransition.instance != null)
         {
@@ -69,6 +56,23 @@ public class GameMenuController : MonoBehaviour
         else
         {
             SceneManager.LoadScene("MainMenuScene");
+        }
+    }
+
+    private void SaveCurrentPlayerProgress()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
+        {
+            PlayerCharacter player = FindAnyObjectByType<PlayerCharacter>();
+            if (player != null)
+            {
+                GameManager.Instance.PlayerData.currentHealth = player.GetCurrentHealth();
+                GameManager.Instance.PlayerData.currentManaPoints = player.GetCurrentMana();
+                GameManager.Instance.PlayerData.latestCheckpointPosition = player.transform.position;
+                GameManager.Instance.PlayerData.hasCheckpoint = true;
+                
+                Debug.Log("[GameMenuController] Player progress saved before quitting to main menu.");
+            }
         }
     }
 }

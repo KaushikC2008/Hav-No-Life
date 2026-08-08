@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,10 +11,18 @@ public class GameManager : MonoBehaviour
 
     [Header("Player")]
     public PlayerData PlayerData;
-    
+
     public EnemyData CurrentEnemy { get; private set; }
     public List<string> DefeatedEnemies = new List<string>();
     public string CurrentEnemyID;
+    
+
+    [Header("Demo Progress")]
+    private List<string> RegisteredEnemies = new List<string>();
+    public int TotalNormalEnemies = 0;
+    public bool BossDefeated = false;
+    public int DefeatedNormalEnemies = 0;
+    public bool CurrentEnemyIsBoss;
 
     public Vector3 LastPlayerPosition;
     public bool ShouldRestorePosition = false;
@@ -35,6 +44,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SavePlayerPosition(Vector3 position)
+    {
+        LastPlayerPosition = position;
+        ShouldRestorePosition = true;
+    }
+
     public void SetCurrentEnemy(EnemyData enemy)
     {
         CurrentEnemy = enemy;
@@ -47,10 +62,55 @@ public class GameManager : MonoBehaviour
 
     public void DefeatEnemy(string id)
     {
-        if (!DefeatedEnemies.Contains(id))
+        if (DefeatedEnemies.Contains(id))
+            return;
+
+        DefeatedEnemies.Add(id);
+
+        if (CurrentEnemyIsBoss)
         {
-            DefeatedEnemies.Add(id);
+            BossDefeated = true;
+            Debug.Log("Boss defeated!");
         }
+        else
+        {
+            DefeatedNormalEnemies++;
+        }
+
+        Debug.Log(
+            $"Enemy defeated: {id} | " +
+            $"Normal enemies: {DefeatedNormalEnemies}/{TotalNormalEnemies} | " +
+            $"Boss defeated: {BossDefeated}"
+        );
+    }
+
+    public void RegisterNormalEnemy()
+    { 
+        TotalNormalEnemies++; 
+    }
+
+    public void RegisterEnemy(string enemyID, bool isBoss)
+    {
+        if (RegisteredEnemies.Contains(enemyID))
+            return;
+
+        RegisteredEnemies.Add(enemyID);
+
+        if (!isBoss)
+        {
+            TotalNormalEnemies++;
+        }
+
+        Debug.Log(
+            $"Registered Enemy: {enemyID} | " +
+            $"Total Normal Enemies: {TotalNormalEnemies}"
+        );
+    }
+
+    public bool IsDemoFinished()
+    {
+        int requiredEnemies = Mathf.CeilToInt(TotalNormalEnemies * 0.9f);
+        return DefeatedEnemies.Count >= requiredEnemies && BossDefeated;
     }
 
     public bool GainXP(int xpAmount)
@@ -68,11 +128,11 @@ public class GameManager : MonoBehaviour
         return didLevelUp;
     }
 
-   private void LevelUp()
+    private void LevelUp()
     {
         PlayerData.currentXP -= PlayerData.xpToNextLevel;
         PlayerData.currentLevel++;
-        
+
         PlayerData.xpToNextLevel = 100 * PlayerData.currentLevel;
 
         PlayerData.maxHealth += 10;

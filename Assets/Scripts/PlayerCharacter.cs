@@ -42,7 +42,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (combatManager != null) 
             combatManager.LogMessage("[SPELL] Casting Fireball");
-        //animator.SetTrigger("CastFireBall");
+        animator.SetTrigger("FireBall");
     }
 
     public void PlayHit()
@@ -103,5 +103,21 @@ public class PlayerCharacter : MonoBehaviour
     public void StopRun()
     {
         animator.SetBool("Run",false);
+    }
+
+    public void SetHealth(int health)
+    {
+        if (data != null)
+        {
+            data.currentHealth = Mathf.Clamp(health, 0, data.maxHealth);
+        }
+    }
+
+    public void SetMana(int mana)
+    {
+        if (data != null)
+        {
+            data.currentManaPoints = Mathf.Clamp(mana, 0, data.maxManaPoints);
+        }
     }
 }

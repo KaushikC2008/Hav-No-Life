@@ -1,0 +1,353 @@
+fileFormatVersion: 2
+guid: fe3c5cbd6fba3462d9811b9c3980ab30
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 47
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 426
+        width: 79
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2a5b9d74d7a4996aafe3394b34c56b
+      internalID: -1374044986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 426
+        width: 82
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4202229}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f9714a6be8d447fbbb71e7b86397f1
+      internalID: 106783318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 426
+        width: 80
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41209325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c9efcdc4c9c4b8d89268e5c91bedfa
+      internalID: 510085969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 428
+        width: 111
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40074322}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69ddcda7334e40f38d3ac31f6d243ed
+      internalID: -1616220530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 285
+        width: 106
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40681034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57be33b5654104197a013bc71872e73d
+      internalID: -290208083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 285
+        width: 104
+        height: 141
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40681034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b42c70762f97433f9d28b03b1afd3cf
+      internalID: 366963007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 284
+        width: 101
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41209304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b68be65a87a54dd5bbdcff889507b88
+      internalID: 1124385408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 282
+        width: 104
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4133144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0021af94677ba488eabbf220217a2cc9
+      internalID: -1951111422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 139
+        width: 107
+        height: 145
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4093811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16112d24595ec43d6b698f46077d505b
+      internalID: -219776986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 140
+        width: 82
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40746704}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3d629e2dddd43d19ec847825767e3c
+      internalID: 1561432129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 138
+        width: 82
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41672012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533cc02448994478a9af88f109a7521e
+      internalID: -370940353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayerDefend-removebg-preview_0: -1374044986
+      PlayerDefend-removebg-preview_1: 106783318
+      PlayerDefend-removebg-preview_10: -370940353
+      PlayerDefend-removebg-preview_2: 510085969
+      PlayerDefend-removebg-preview_3: -1616220530
+      PlayerDefend-removebg-preview_4: -290208083
+      PlayerDefend-removebg-preview_5: 366963007
+      PlayerDefend-removebg-preview_6: 1124385408
+      PlayerDefend-removebg-preview_7: -1951111422
+      PlayerDefend-removebg-preview_8: -219776986
+      PlayerDefend-removebg-preview_9: 1561432129
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

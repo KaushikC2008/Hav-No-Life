@@ -27,11 +27,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (GameManager.Instance != null && GameManager.Instance.ShouldRestorePosition)
         {
-           if (SceneManager.GetActiveScene().name == "Tutorial Scene") 
-           {
-               transform.position = GameManager.Instance.LastPlayerPosition;
-               GameManager.Instance.ShouldRestorePosition = false;
-           }
+            if (SceneManager.GetActiveScene().name == "Tutorial Scene")
+            {
+                transform.position = GameManager.Instance.LastPlayerPosition;
+                GameManager.Instance.ShouldRestorePosition = false;
+            }
         }
     }
 
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         if (!value.isPressed) return;
         if (isGrounded)
         {
-            myRigitBody2D.velocity = new Vector2(myRigitBody2D.velocity.x, jumpSpeed);
+            myRigitBody2D.linearVelocity = new Vector2(myRigitBody2D.linearVelocity.x, jumpSpeed);
         }
     }
 
@@ -73,23 +73,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isTouchingWall && Mathf.Sign(moveInput.x) == Mathf.Sign(transform.localScale.x))
         {
-            myRigitBody2D.velocity = new Vector2(0f, myRigitBody2D.velocity.y);
+            myRigitBody2D.linearVelocity = new Vector2(0f, myRigitBody2D.linearVelocity.y);
             myAnimator.SetBool("isRunning", false);
             return;
         }
 
-        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigitBody2D.velocity.y);
-        myRigitBody2D.velocity = playerVelocity;
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigitBody2D.velocity.x) > Mathf.Epsilon;
+        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigitBody2D.linearVelocity.y);
+        myRigitBody2D.linearVelocity = playerVelocity;
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigitBody2D.linearVelocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
     }
 
     void FlipSprite()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigitBody2D.velocity.x) > Mathf.Epsilon;
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigitBody2D.linearVelocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(myRigitBody2D.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(myRigitBody2D.linearVelocity.x), 1f);
         }
     }
 }

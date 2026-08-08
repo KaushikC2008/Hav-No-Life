@@ -25,9 +25,16 @@ public class CombatManager : MonoBehaviour
     public PlayerCharacter player;
     [SerializeField] private TextMeshProUGUI playerHealthText;
     [SerializeField] private TextMeshProUGUI playerManaText;
+    [SerializeField] private Vector3 customPlayerSpawnPosition;
     private Vector3 playerStartPosition;
     private float attackDistance = 1.5f;
     [SerializeField] private float moveSpeed = 5f;
+    private int startingPlayerHealth;
+    private int startingPlayerMana;
+
+    [Header("Fireball Effect")]
+    [SerializeField] private GameObject fireballSprite;
+    [SerializeField] private Vector3 fireballCustomStartPosition;
 
     [Header("UI")]
     [SerializeField] private GameObject attackPanel;
@@ -35,6 +42,9 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI levelUpTitleText;
     [SerializeField] private TextMeshProUGUI levelUpStatsText;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private Button focusButton;
+    [SerializeField] private Button fireballButton;
+
 
     [Header("Combat Log UI")]
     [SerializeField] private Transform logContentParent;
@@ -52,12 +62,16 @@ public class CombatManager : MonoBehaviour
     {
         player.Setup();
         player.combatManager = this;
-        playerStartPosition = player.transform.position;
+        playerStartPosition = customPlayerSpawnPosition;
+
+        player.transform.position = customPlayerSpawnPosition;
 
         if (GameManager.Instance != null && GameManager.Instance.CurrentEnemy != null)
         {
             SetupBattle(GameManager.Instance.CurrentEnemy);
-        } else {
+        }
+        else
+        {
             Debug.LogWarning("No enemy data found!");
         }
     }
@@ -67,10 +81,15 @@ public class CombatManager : MonoBehaviour
         enemy.Setup(data);
         enemy.combatManager = this;
         enemyNameText.text = data.enemyName;
+
         enemyHealthText.text = $"HP: {data.maxHealth}/{data.maxHealth}";
         enemyManaText.text = $"MP: {data.maxManaPoints}/{data.maxManaPoints}";
         playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
+
+        startingPlayerHealth = player.GetCurrentHealth();
+        startingPlayerMana = player.GetCurrentMana();
+
         startEnemyPosition = data.combatPosition;
         attackDistance = data.playerCombatOffset.x;
 
@@ -84,13 +103,14 @@ public class CombatManager : MonoBehaviour
         }
         state = BattleState.PlayerTurn;
         UpdateTurnBanner(true);
+        UpdateManaButtons();
     }
 
     public void BasicAttack()
     {
         if (state != BattleState.PlayerTurn)
             return;
-        
+
         if (isAttacking)
             return;
         StartCoroutine(PlayerAttackRoutine());
@@ -99,7 +119,7 @@ public class CombatManager : MonoBehaviour
     public void FireBall()
     {
         if (state != BattleState.PlayerTurn)
-        return;
+            return;
 
         if (player.GetCurrentMana() < 5)
         {
@@ -118,10 +138,40 @@ public class CombatManager : MonoBehaviour
         player.data.currentManaPoints -= 5;
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
 
-        player.CastFireBall(); 
-        
-        yield return new WaitForSeconds(0.5f); 
+        UpdateManaButtons();
 
+        player.CastFireBall();
+
+        yield return new WaitForSeconds(0.5f);
+
+        if (fireballSprite != null)
+        {
+            fireballSprite.SetActive(true);
+            fireballSprite.transform.position = fireballCustomStartPosition;
+
+            Animator fireballAnimator = fireballSprite.GetComponent<Animator>();
+
+            float moveSpeed = 15f;
+            while (Vector3.Distance(fireballSprite.transform.position, enemy.transform.position) > 0.1f)
+            {
+                fireballSprite.transform.position = Vector3.MoveTowards(
+                    fireballSprite.transform.position,
+                    enemy.transform.position,
+                    moveSpeed * Time.deltaTime
+                );
+                yield return null;
+            }
+
+            if (fireballAnimator != null)
+            {
+                fireballAnimator.SetTrigger("Explode");
+            }
+            yield return new WaitForSeconds(0.4f);
+
+            fireballSprite.SetActive(false);
+        }
+
+        // Apply damage right on impact
         enemy.TakeDamage(player.data.attack + 2);
         enemyHealthText.text = $"HP: {enemy.GetCurrentHP()}/{enemy.data.maxHealth}";
         enemyManaText.text = $"MP: {enemy.GetCurrentMana()}/{enemy.data.maxManaPoints}";
@@ -135,6 +185,23 @@ public class CombatManager : MonoBehaviour
         }
 
         StartCoroutine(EnemyTurn());
+    }
+
+    private void UpdateManaButtons()
+    {
+        if (focusButton != null)
+        {
+            focusButton.interactable =
+                state == BattleState.PlayerTurn &&
+                player.GetCurrentMana() < player.data.maxManaPoints;
+        }
+
+        if (fireballButton != null)
+        {
+            fireballButton.interactable =
+                state == BattleState.PlayerTurn &&
+                player.GetCurrentMana() >= 5;
+        }
     }
 
     public void Focus()
@@ -159,6 +226,8 @@ public class CombatManager : MonoBehaviour
         player.Focus();
         LogMessage($"Player focused! Current Mana: {player.GetCurrentMana()}/{player.data.maxManaPoints}");
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
+
+        UpdateManaButtons();
 
         yield return new WaitForSeconds(0.75f);
 
@@ -191,7 +260,7 @@ public class CombatManager : MonoBehaviour
         SetPlayerControls(false);
 
         Vector3 attackPosition = enemy.transform.position + Vector3.left * attackDistance;
-        yield return StartCoroutine(PlayerMoveToPosition(attackPosition,false));
+        yield return StartCoroutine(PlayerMoveToPosition(attackPosition, false));
         player.StopRun();
         player.PlayAttack();
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
@@ -200,11 +269,11 @@ public class CombatManager : MonoBehaviour
         enemyHealthText.text = $"HP: {enemy.GetCurrentHP()}/{enemy.data.maxHealth}";
         if (enemy.GetCurrentHP() <= 0)
         {
-            StartCoroutine(HandleEnemyDeath());
+            yield return StartCoroutine(HandleEnemyDeath());
             yield break;
         }
         yield return new WaitForSeconds(0.5f);
-        yield return StartCoroutine(PlayerMoveToPosition(playerStartPosition,true));
+        yield return StartCoroutine(PlayerMoveToPosition(playerStartPosition, true));
         player.StopRun();
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(EnemyTurn());
@@ -238,6 +307,7 @@ public class CombatManager : MonoBehaviour
             player.SetDefending(false);
             state = BattleState.PlayerTurn;
             SetPlayerControls(true);
+            UpdateManaButtons();
             UpdateTurnBanner(true);
         }
     }
@@ -247,14 +317,14 @@ public class CombatManager : MonoBehaviour
         LogMessage($"[ATTACK] {enemy.data.enemyName} uses a Basic Attack!");
         Vector3 enemyAttackPosition = player.transform.position + Vector3.right * (attackDistance);
         yield return StartCoroutine(EnemyMoveToPosition(enemyAttackPosition, false));
-        
+
         enemy.StopRun();
         enemy.PlayAttack();
         yield return new WaitForSeconds(0.5f);
-        
+
         player.TakeDamage(enemy.data.attack);
         playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
-        
+
         yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(EnemyMoveToPosition(startEnemyPosition, true));
         enemy.StopRun();
@@ -264,16 +334,16 @@ public class CombatManager : MonoBehaviour
     private IEnumerator EnemySpecialRoutine()
     {
         LogMessage($"[SPELL] {enemy.data.enemyName} casts a Special Spell!");
-        
+
         enemy.SpendMana(enemy.data.specialAttackCost);
-        
+
         enemy.PlayAttack(); // Change this when make new Animation for special attack
-        
+
         yield return new WaitForSeconds(0.5f);
-        
+
         player.TakeDamage(enemy.data.specialAttackDamage);
         playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
-        
+
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -290,6 +360,18 @@ public class CombatManager : MonoBehaviour
         foreach (Button btn in buttons)
         {
             btn.interactable = enabled;
+        }
+
+        if (focusButton != null)
+        {
+            focusButton.interactable = enabled &&
+                player.GetCurrentMana() < player.data.maxManaPoints;
+        }
+
+        if (fireballButton != null)
+        {
+            fireballButton.interactable = enabled &&
+                player.GetCurrentMana() >= 5;
         }
     }
 
@@ -398,7 +480,7 @@ public class CombatManager : MonoBehaviour
                                     $"Max HP: {GameManager.Instance.PlayerData.maxHealth}\n" +
                                     $"Attack: {GameManager.Instance.PlayerData.attack}\n" +
                                     $"Defense: {GameManager.Instance.PlayerData.defense}";
-            yield return new WaitForSeconds(3.5f); 
+            yield return new WaitForSeconds(3.5f);
         }
         else
         {
@@ -413,7 +495,7 @@ public class CombatManager : MonoBehaviour
     private void UpdateTurnBanner(bool isPlayerTurn)
     {
         if (turnBannerImage == null) return;
-        
+
         turnBannerImage.gameObject.SetActive(true);
 
         if (isPlayerTurn)
@@ -433,7 +515,7 @@ public class CombatManager : MonoBehaviour
         state = BattleState.Lost;
         SetPlayerControls(false);
         if (turnBannerImage != null) turnBannerImage.gameObject.SetActive(false);
-        
+
         LogMessage("[DEATH] Player has fallen! Waiting for animation...");
 
         if (combatLogScrollRect != null) combatLogScrollRect.gameObject.SetActive(false);
@@ -452,7 +534,8 @@ public class CombatManager : MonoBehaviour
 
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.PlayerData.currentHealth = GameManager.Instance.PlayerData.maxHealth;
+            GameManager.Instance.PlayerData.currentHealth = startingPlayerHealth;
+            GameManager.Instance.PlayerData.currentManaPoints = startingPlayerMana;
 
             if (GameManager.Instance.PlayerData.hasCheckpoint)
             {
@@ -466,6 +549,45 @@ public class CombatManager : MonoBehaviour
         }
 
         SceneTransition.instance.LoadScene("Tutorial Scene");
+    }
+
+    public void RetryBattle()
+    {
+        Debug.Log("🔄 Retrying battle - restoring pre-battle stats!");
+        Time.timeScale = 1f;
+
+        if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
+        {
+            // Restore health and mana back to the values they had when the battle started
+            GameManager.Instance.PlayerData.currentHealth = startingPlayerHealth;
+            GameManager.Instance.PlayerData.currentManaPoints = startingPlayerMana;
+        }
+
+        // Reload the active scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitToMainMenu()
+    {
+        Debug.Log("🏠 Quitting to Main Menu - restoring pre-battle stats!");
+        Time.timeScale = 1f;
+
+        if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
+        {
+            // Restore health and mana back to the values they had when the battle started
+            GameManager.Instance.PlayerData.currentHealth = startingPlayerHealth;
+            GameManager.Instance.PlayerData.currentManaPoints = startingPlayerMana;
+        }
+
+        // Go to main menu using your SceneTransition or SceneManager
+        if (SceneTransition.instance != null)
+        {
+            SceneTransition.instance.LoadScene("MainMenuScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenuScene");
+        }
     }
 
     public void LogMessage(string message)
@@ -487,7 +609,7 @@ public class CombatManager : MonoBehaviour
 
     private IEnumerator ScrollToBottomRoutine()
     {
-        yield return null; 
+        yield return null;
 
         if (combatLogScrollRect != null)
         {
