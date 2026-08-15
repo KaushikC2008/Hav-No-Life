@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 6b073ee910673452f90c3e2e329b8964
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9047857489630044888
+    second: LizrdSpecial_0
+  - first:
+      213: -1594816954186641357
+    second: LizrdSpecial_1
+  - first:
+      213: 3099837548319679769
+    second: LizrdSpecial_2
+  - first:
+      213: -389514722910299484
+    second: LizrdSpecial_3
+  - first:
+      213: 5389179115767336771
+    second: LizrdSpecial_4
+  - first:
+      213: -4272836967632331010
+    second: LizrdSpecial_5
+  - first:
+      213: 5878760218143786555
+    second: LizrdSpecial_6
+  - first:
+      213: 7495745602629601723
+    second: LizrdSpecial_7
+  - first:
+      213: 7474737278847212369
+    second: LizrdSpecial_8
+  - first:
+      213: 3208666573851560634
+    second: LizrdSpecial_9
+  - first:
+      213: -1587486459384948222
+    second: LizrdSpecial_10
+  - first:
+      213: 7360307777107956264
+    second: LizrdSpecial_11
+  - first:
+      213: 7963185856026790340
+    second: LizrdSpecial_12
+  - first:
+      213: -4067366793158804537
+    second: LizrdSpecial_13
+  - first:
+      213: -2548413505941316136
+    second: LizrdSpecial_14
+  - first:
+      213: -7348029536470949787
+    second: LizrdSpecial_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LizrdSpecial_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 311
+        width: 146
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d5e300d8d8f6280800000000000000
+      internalID: -9047857489630044888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 310
+        width: 140
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3305feb0e621ed9e0800000000000000
+      internalID: -1594816954186641357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_2
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 311
+        width: 134
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915230993d5d40b20800000000000000
+      internalID: 3099837548319679769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_3
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 308
+        width: 96
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa952a5c6a289af0800000000000000
+      internalID: -389514722910299484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_4
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 311
+        width: 51
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f044a4ad53aca40800000000000000
+      internalID: 5389179115767336771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_5
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 156
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe1e199a65d3b4c0800000000000000
+      internalID: -4272836967632331010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_6
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 203
+        width: 141
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36882a754d859150800000000000000
+      internalID: 5878760218143786555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 192
+        width: 105
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb90f6359ec360860800000000000000
+      internalID: 7495745602629601723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_8
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 153
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15bde07c3f99bb760800000000000000
+      internalID: 7474737278847212369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_9
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 169
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba8719af39778c20800000000000000
+      internalID: 3208666573851560634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_10
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 16
+        width: 138
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a1e9ed97d18f9e0800000000000000
+      internalID: -1587486459384948222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_11
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 81
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822901c3de0152660800000000000000
+      internalID: 7360307777107956264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 16
+        width: 161
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c944e4685be28e60800000000000000
+      internalID: 7963185856026790340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_13
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 16
+        width: 138
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbbc82937fcd87c0800000000000000
+      internalID: -4067366793158804537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_14
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 14
+        width: 151
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd5f8d1b6732acd0800000000000000
+      internalID: -2548413505941316136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LizrdSpecial_15
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 50
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560229f611e860a90800000000000000
+      internalID: -7348029536470949787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LizrdSpecial_0: -9047857489630044888
+      LizrdSpecial_1: -1594816954186641357
+      LizrdSpecial_10: -1587486459384948222
+      LizrdSpecial_11: 7360307777107956264
+      LizrdSpecial_12: 7963185856026790340
+      LizrdSpecial_13: -4067366793158804537
+      LizrdSpecial_14: -2548413505941316136
+      LizrdSpecial_15: -7348029536470949787
+      LizrdSpecial_2: 3099837548319679769
+      LizrdSpecial_3: -389514722910299484
+      LizrdSpecial_4: 5389179115767336771
+      LizrdSpecial_5: -4272836967632331010
+      LizrdSpecial_6: 5878760218143786555
+      LizrdSpecial_7: 7495745602629601723
+      LizrdSpecial_8: 7474737278847212369
+      LizrdSpecial_9: 3208666573851560634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

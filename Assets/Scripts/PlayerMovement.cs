@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
 
-    CapsuleCollider2D myBodyCollider;
+    BoxCollider2D myBodyCollider;
     Vector2 moveInput;
     Rigidbody2D myRigitBody2D;
     Animator myAnimator;
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigitBody2D = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        myBodyCollider = GetComponent<CapsuleCollider2D>();
+        myBodyCollider = GetComponent<BoxCollider2D>();
 
         if (GameManager.Instance != null && GameManager.Instance.ShouldRestorePosition)
         {
@@ -59,7 +59,11 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckGround()
     {
-        isGrounded = myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Platform"));
+        Vector2 boxSize = new Vector2(myBodyCollider.bounds.size.x * 0.8f, 0.05f);
+        Vector2 boxCenter = new Vector2(myBodyCollider.bounds.center.x, myBodyCollider.bounds.min.y);
+
+        RaycastHit2D hit = Physics2D.BoxCast(boxCenter, boxSize, 0f, Vector2.down, 0.1f, LayerMask.GetMask("Platform"));
+        isGrounded = hit.collider != null;
     }
 
     void CheckWall()

@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes 1/Tutorial Scene.unity
+    path: Assets/Scenes/Tutorial Scene.unity
     guid: 51efba353fa42409589c87704c4b53f2
   - enabled: 1
-    path: Assets/Scenes 1/Combat Scene.unity
+    path: Assets/Scenes/Combat Scene.unity
     guid: 1d8f36911512b4f1cb29c5aba66b8204
   - enabled: 1
-    path: Assets/Scenes 1/MainMenuScene.unity
+    path: Assets/Scenes/MainMenuScene.unity
     guid: d2998dd3971794a7c9f1b99ba83c5bf3
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

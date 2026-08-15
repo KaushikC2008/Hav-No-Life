@@ -1,0 +1,346 @@
+fileFormatVersion: 2
+guid: b3bf80c9775494d3397174e969fcc4ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 558344071243385064
+    second: PlantMonsterSpell_0
+  - first:
+      213: -9206530957192171864
+    second: PlantMonsterSpell_1
+  - first:
+      213: 6808837764391559232
+    second: PlantMonsterSpell_2
+  - first:
+      213: 3120167655895237083
+    second: PlantMonsterSpell_3
+  - first:
+      213: -9083121162531987934
+    second: PlantMonsterSpell_4
+  - first:
+      213: 6174490631595638643
+    second: PlantMonsterSpell_5
+  - first:
+      213: -555701886613003081
+    second: PlantMonsterSpell_6
+  - first:
+      213: -5986608863066930350
+    second: PlantMonsterSpell_7
+  - first:
+      213: 7704028842120937180
+    second: PlantMonsterSpell_8
+  - first:
+      213: 7419153034578867425
+    second: PlantMonsterSpell_9
+  - first:
+      213: 3225615061374607364
+    second: PlantMonsterSpell_10
+  - first:
+      213: -2922900661672346018
+    second: PlantMonsterSpell_11
+  - first:
+      213: -7373433193608532432
+    second: PlantMonsterSpell_12
+  - first:
+      213: 7001582426945263579
+    second: PlantMonsterSpell_13
+  - first:
+      213: -4650750432815291487
+    second: PlantMonsterSpell_14
+  - first:
+      213: 5615976046750559581
+    second: PlantMonsterSpell_15
+  - first:
+      213: 1782718632910248228
+    second: PlantMonsterSpell_16
+  - first:
+      213: 2391710879896004970
+    second: PlantMonsterSpell_17
+  - first:
+      213: -4659590820796636138
+    second: PlantMonsterSpell_18
+  - first:
+      213: 3632403248324176542
+    second: PlantMonsterSpell_19
+  - first:
+      213: 1384849309982362370
+    second: PlantMonsterSpell_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlantMonsterSpell_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 248
+        width: 95
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e848ec79f2afb700800000000000000
+      internalID: 558344071243385064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterSpell_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 249
+        width: 117
+        height: 80
+      alignment: 9
+      pivot: {x: 0.6010076, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae6cea6fd4db3080800000000000000
+      internalID: -9206530957192171864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterSpell_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 248
+        width: 146
+        height: 79
+      alignment: 9
+      pivot: {x: 0.68455315, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040e2d73fd9dd7e50800000000000000
+      internalID: 6808837764391559232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterSpell_3
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 246
+        width: 151
+        height: 77
+      alignment: 9
+      pivot: {x: 0.6940946, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd18c41a3ff0d4b20800000000000000
+      internalID: 3120167655895237083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterSpell_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 94
+        width: 83
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e92775d6542f180800000000000000
+      internalID: -9083121162531987934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterSpell_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 80
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b4ea6f0410c948f0800000000000000
+      internalID: -555701886613003081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 99c1e4fb1bc91433e9e83870fed88b83
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlantMonsterSpell_0: 558344071243385064
+      PlantMonsterSpell_1: -9206530957192171864
+      PlantMonsterSpell_10: 3225615061374607364
+      PlantMonsterSpell_11: -2922900661672346018
+      PlantMonsterSpell_12: -7373433193608532432
+      PlantMonsterSpell_13: 7001582426945263579
+      PlantMonsterSpell_14: -4650750432815291487
+      PlantMonsterSpell_15: 5615976046750559581
+      PlantMonsterSpell_16: 1782718632910248228
+      PlantMonsterSpell_17: 2391710879896004970
+      PlantMonsterSpell_18: -4659590820796636138
+      PlantMonsterSpell_19: 3632403248324176542
+      PlantMonsterSpell_2: 6808837764391559232
+      PlantMonsterSpell_20: 1384849309982362370
+      PlantMonsterSpell_3: 3120167655895237083
+      PlantMonsterSpell_4: -9083121162531987934
+      PlantMonsterSpell_5: 6174490631595638643
+      PlantMonsterSpell_6: -555701886613003081
+      PlantMonsterSpell_7: -5986608863066930350
+      PlantMonsterSpell_8: 7704028842120937180
+      PlantMonsterSpell_9: 7419153034578867425
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

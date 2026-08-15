@@ -35,7 +35,16 @@ public class EnemyCharacter : MonoBehaviour
         {
             combatManager.LogMessage($"[FOCUS] {data.enemyName} focused! Regenerated mana to {currentMana}/{data.maxManaPoints}");
         }
-        // animator.SetTrigger("Focus");
+        animator.SetTrigger("Focus");
+    }
+
+    public void CastSpecialAttack()
+    {
+        if (combatManager != null)
+        {
+            combatManager.LogMessage($"[SPELL] {data.enemyName} casted special attack! Remaining mana: {currentMana}/{data.maxManaPoints}");
+        }
+        animator.SetTrigger("Special");
     }
 
     public void SpendMana(int amount)

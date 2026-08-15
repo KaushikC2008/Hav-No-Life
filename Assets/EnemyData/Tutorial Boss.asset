@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Lizrd
   combatSprite: {fileID: 21300000, guid: e009d798d466d4aaf97a3a6078ae2c4b, type: 3}
-  isBoss: 1
-  enemyID: 
   maxHealth: 50
   attack: 35
   defense: 15
@@ -27,4 +25,6 @@ MonoBehaviour:
   combatPosition: {x: 7.44, y: -1.1}
   playerCombatOffset: {x: 5, y: 0}
   maxManaPoints: 30
+  enemySpecialAnimationDelay: 0
   specialAttackCost: 15
+  uniqueSpellSprite: {fileID: 5878760218143786555, guid: 6b073ee910673452f90c3e2e329b8964, type: 3}

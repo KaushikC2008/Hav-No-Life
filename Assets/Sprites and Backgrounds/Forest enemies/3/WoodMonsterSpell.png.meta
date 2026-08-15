@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: d3a40741850614c9f89ad8486b09dddf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4235559381299487326
+    second: WoodMonsterSpell_0
+  - first:
+      213: -1121637421110410716
+    second: WoodMonsterSpell_1
+  - first:
+      213: 191230747030899900
+    second: WoodMonsterSpell_2
+  - first:
+      213: 4874084963953318785
+    second: WoodMonsterSpell_3
+  - first:
+      213: 7975606358512209787
+    second: WoodMonsterSpell_4
+  - first:
+      213: -7129434236692034650
+    second: WoodMonsterSpell_5
+  - first:
+      213: 8524958193962156161
+    second: WoodMonsterSpell_6
+  - first:
+      213: -3826917896899595769
+    second: WoodMonsterSpell_7
+  - first:
+      213: -6187214684996461439
+    second: WoodMonsterSpell_8
+  - first:
+      213: 2759092143415510891
+    second: WoodMonsterSpell_9
+  - first:
+      213: 7452423736090035612
+    second: WoodMonsterSpell_10
+  - first:
+      213: -6353385040615639523
+    second: WoodMonsterSpell_11
+  - first:
+      213: 5973184724128740154
+    second: WoodMonsterSpell_12
+  - first:
+      213: -4444898335709516535
+    second: WoodMonsterSpell_13
+  - first:
+      213: 149895716036525313
+    second: WoodMonsterSpell_14
+  - first:
+      213: -7259809643910340583
+    second: WoodMonsterSpell_15
+  - first:
+      213: 7313360740718090083
+    second: WoodMonsterSpell_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WoodMonsterSpell_0
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 581
+        width: 100
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52ed6bf0dab7ca30800000000000000
+      internalID: 4235559381299487326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_1
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 581
+        width: 98
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422cdeb45b42f60f0800000000000000
+      internalID: -1121637421110410716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_2
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 448
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbcc8eae95367a200800000000000000
+      internalID: 191230747030899900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 581
+        width: 107
+        height: 108
+      alignment: 9
+      pivot: {x: 0.55198485, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b9281637a34a340800000000000000
+      internalID: 4874084963953318785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_5
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 581
+        width: 109
+        height: 109
+      alignment: 9
+      pivot: {x: 0.5437409, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab8678c5592f0d90800000000000000
+      internalID: -7129434236692034650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 407
+        width: 117
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5815002, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1808b2c6f4cbe4670800000000000000
+      internalID: 8524958193962156161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_8
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 408
+        width: 135
+        height: 103
+      alignment: 9
+      pivot: {x: 0.6294949, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c94b77609922aa0800000000000000
+      internalID: -6187214684996461439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_11
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 409
+        width: 126
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16f2dc97fd34d7a0800000000000000
+      internalID: -6353385040615639523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonsterSpell_12
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 403
+        width: 87
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33bb7bfbd305e250800000000000000
+      internalID: 5973184724128740154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 783c83afc7cf440a190aaee951a96b7a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WoodMonsterSpell_0: 4235559381299487326
+      WoodMonsterSpell_1: -1121637421110410716
+      WoodMonsterSpell_10: 7452423736090035612
+      WoodMonsterSpell_11: -6353385040615639523
+      WoodMonsterSpell_12: 5973184724128740154
+      WoodMonsterSpell_13: -4444898335709516535
+      WoodMonsterSpell_14: 149895716036525313
+      WoodMonsterSpell_15: -7259809643910340583
+      WoodMonsterSpell_16: 7313360740718090083
+      WoodMonsterSpell_2: 191230747030899900
+      WoodMonsterSpell_3: 4874084963953318785
+      WoodMonsterSpell_4: 7975606358512209787
+      WoodMonsterSpell_5: -7129434236692034650
+      WoodMonsterSpell_6: 8524958193962156161
+      WoodMonsterSpell_7: -3826917896899595769
+      WoodMonsterSpell_8: -6187214684996461439
+      WoodMonsterSpell_9: 2759092143415510891
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

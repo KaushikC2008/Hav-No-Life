@@ -25,4 +25,6 @@ MonoBehaviour:
   combatPosition: {x: 9.6, y: -2.1}
   playerCombatOffset: {x: 2, y: 0}
   maxManaPoints: 15
+  enemySpecialAnimationDelay: 0.6
   specialAttackCost: 7
+  uniqueSpellSprite: {fileID: 191230747030899900, guid: d3a40741850614c9f89ad8486b09dddf, type: 3}

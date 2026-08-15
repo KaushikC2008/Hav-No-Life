@@ -27,6 +27,8 @@ public class EnemyData : ScriptableObject
 
     [Header("Mana & Spells")]
     public int maxManaPoints;
+    public float enemySpecialAnimationDelay;
     public int specialAttackCost;
+    public Sprite uniqueSpellSprite;
     public int specialAttackDamage => Mathf.RoundToInt(attack * 1.5f); // Example: Special attack deals 1.5x base attack damage
 }

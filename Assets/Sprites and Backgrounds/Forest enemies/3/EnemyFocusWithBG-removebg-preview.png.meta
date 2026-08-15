@@ -1,0 +1,339 @@
+fileFormatVersion: 2
+guid: e05a68bd71fe74dbdaaa8442954ed0a0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2068639930061353859
+    second: EnemyFocusWithBG-removebg-preview_0
+  - first:
+      213: -670712708034363707
+    second: EnemyFocusWithBG-removebg-preview_1
+  - first:
+      213: -867052137021245456
+    second: EnemyFocusWithBG-removebg-preview_2
+  - first:
+      213: 6083032537199145967
+    second: EnemyFocusWithBG-removebg-preview_3
+  - first:
+      213: 5589207252720932341
+    second: EnemyFocusWithBG-removebg-preview_4
+  - first:
+      213: 4871162281618273795
+    second: EnemyFocusWithBG-removebg-preview_5
+  - first:
+      213: 7804202205855055512
+    second: EnemyFocusWithBG-removebg-preview_6
+  - first:
+      213: -6447263098598049608
+    second: EnemyFocusWithBG-removebg-preview_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 55
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WoodMonster_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 275
+        width: 118
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383fe776e0945bc10800000000000000
+      internalID: 2068639930061353859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonster_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 275
+        width: 124
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce754b785621b6f0800000000000000
+      internalID: -670712708034363707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonster_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 274
+        width: 121
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe3f5e00dd54b6450800000000000000
+      internalID: 6083032537199145967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonster_4
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 275
+        width: 131
+        height: 180
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3754359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5d77a226ad09d40800000000000000
+      internalID: 5589207252720932341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonster_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 50
+        width: 129
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5381534, y: 0.350583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306732f5948d99340800000000000000
+      internalID: 4871162281618273795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonster_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 49
+        width: 122
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48046887}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e7f4bce881e4c60800000000000000
+      internalID: 7804202205855055512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonster_8
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 50
+        width: 123
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4570318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b83492fe58b686a0800000000000000
+      internalID: -6447263098598049608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WoodMonster_6
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 50
+        width: 122
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35946465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11584d4d85e7e4bd399ddc3062257ea6
+      internalID: 528330252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f50cc214c288f400f9567bfda12893f5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EnemyFocusWithBG-removebg-preview_2: -867052137021245456
+      WoodMonster_1: 2068639930061353859
+      WoodMonster_2: -670712708034363707
+      WoodMonster_3: 6083032537199145967
+      WoodMonster_4: 5589207252720932341
+      WoodMonster_5: 4871162281618273795
+      WoodMonster_6: 528330252
+      WoodMonster_7: 7804202205855055512
+      WoodMonster_8: -6447263098598049608
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

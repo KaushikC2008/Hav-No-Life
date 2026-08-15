@@ -1,0 +1,428 @@
+fileFormatVersion: 2
+guid: 951e893874ad24608be7c92db2430bde
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7154222770753725231
+    second: PlantMonsterFocus_0
+  - first:
+      213: 7399882486537375693
+    second: PlantMonsterFocus_1
+  - first:
+      213: -4449254233282688289
+    second: PlantMonsterFocus_2
+  - first:
+      213: 7983560494746335126
+    second: PlantMonsterFocus_3
+  - first:
+      213: -518652065466122321
+    second: PlantMonsterFocus_4
+  - first:
+      213: 2794244940658882924
+    second: PlantMonsterFocus_5
+  - first:
+      213: -8465681719175024381
+    second: PlantMonsterFocus_6
+  - first:
+      213: 5441695390635222969
+    second: PlantMonsterFocus_7
+  - first:
+      213: 8482843917686660866
+    second: PlantMonsterFocus_8
+  - first:
+      213: 1566557965693231408
+    second: PlantMonsterFocus_9
+  - first:
+      213: 3790726561454335049
+    second: PlantMonsterFocus_10
+  - first:
+      213: -4876677086997382782
+    second: PlantMonsterFocus_11
+  - first:
+      213: -1321122006035893549
+    second: PlantMonsterFocus_12
+  - first:
+      213: -4089595187103573448
+    second: PlantMonsterFocus_13
+  - first:
+      213: 3000890278526038879
+    second: PlantMonsterFocus_14
+  - first:
+      213: -4031562495926381119
+    second: PlantMonsterFocus_15
+  - first:
+      213: 8553399979000146931
+    second: PlantMonsterFocus_16
+  - first:
+      213: -1556991504341426438
+    second: PlantMonsterFocus_17
+  - first:
+      213: 4765611152922119213
+    second: PlantMonsterFocus_18
+  - first:
+      213: 1670687281340145518
+    second: PlantMonsterFocus_19
+  - first:
+      213: -3617455608463643563
+    second: PlantMonsterFocus_20
+  - first:
+      213: 1026616521954438184
+    second: PlantMonsterFocus_21
+  - first:
+      213: -9124271686311157367
+    second: PlantMonsterFocus_22
+  - first:
+      213: 3895857989006981894
+    second: PlantMonsterFocus_23
+  - first:
+      213: -3607704327591938448
+    second: PlantMonsterFocus_24
+  - first:
+      213: 842328586000306004
+    second: PlantMonsterFocus_25
+  - first:
+      213: 3706342413959902531
+    second: PlantMonsterFocus_26
+  - first:
+      213: -4166424285120483116
+    second: PlantMonsterFocus_27
+  - first:
+      213: -7994106210556391619
+    second: PlantMonsterFocus_28
+  - first:
+      213: 4754034012323522157
+    second: PlantMonsterFocus_29
+  - first:
+      213: -3770588662795031605
+    second: PlantMonsterFocus_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlantMonsterFocus_4
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 230
+        width: 113
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36640686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6977234a8fd4bce60800000000000000
+      internalID: 7983560494746335126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterFocus_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 232
+        width: 109
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69b76f08f627c620800000000000000
+      internalID: 2794244940658882924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterFocus_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 229
+        width: 113
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5, y: 0.60323673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301fd0b545bd38a80800000000000000
+      internalID: -8465681719175024381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterFocus_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 53
+        width: 107
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40469453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a5b8d48d6de37c0800000000000000
+      internalID: -4089595187103573448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterFocus_6
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 52
+        width: 102
+        height: 123
+      alignment: 9
+      pivot: {x: 0.5, y: 0.38470367}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fda0f0b397f2710800000000000000
+      internalID: 1670687281340145518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterFocus_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 53
+        width: 116
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57586795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c24a799464f3e00800000000000000
+      internalID: 1026616521954438184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterFocus_8
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 53
+        width: 92
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.53376544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981e4476e33106180800000000000000
+      internalID: -9124271686311157367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlantMonsterFocus_3
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 229
+        width: 108
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4290929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f652c9c8e7ad43919d47623e9961860
+      internalID: -333732134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cace2d983ff994d75a0250f00120f9a0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlantMonsterFocus_0: 7154222770753725231
+      PlantMonsterFocus_1: 2794244940658882924
+      PlantMonsterFocus_10: 3790726561454335049
+      PlantMonsterFocus_11: -4876677086997382782
+      PlantMonsterFocus_12: -1321122006035893549
+      PlantMonsterFocus_14: 3000890278526038879
+      PlantMonsterFocus_15: -4031562495926381119
+      PlantMonsterFocus_16: 8553399979000146931
+      PlantMonsterFocus_17: -1556991504341426438
+      PlantMonsterFocus_18: 4765611152922119213
+      PlantMonsterFocus_2: -8465681719175024381
+      PlantMonsterFocus_20: -3617455608463643563
+      PlantMonsterFocus_23: 3895857989006981894
+      PlantMonsterFocus_24: -3607704327591938448
+      PlantMonsterFocus_25: 842328586000306004
+      PlantMonsterFocus_26: 3706342413959902531
+      PlantMonsterFocus_27: -4166424285120483116
+      PlantMonsterFocus_28: -7994106210556391619
+      PlantMonsterFocus_29: 4754034012323522157
+      PlantMonsterFocus_3: -333732134
+      PlantMonsterFocus_30: -3770588662795031605
+      PlantMonsterFocus_32: -521865115
+      PlantMonsterFocus_33: -382219507
+      PlantMonsterFocus_4: 7983560494746335126
+      PlantMonsterFocus_5: -4089595187103573448
+      PlantMonsterFocus_6: 1670687281340145518
+      PlantMonsterFocus_7: 1026616521954438184
+      PlantMonsterFocus_8: -9124271686311157367
+      PlantMonsterFocus_9: 1566557965693231408
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

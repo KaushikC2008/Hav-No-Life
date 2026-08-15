@@ -42,8 +42,12 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI levelUpTitleText;
     [SerializeField] private TextMeshProUGUI levelUpStatsText;
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private Button focusButton;
+
+    [Header("Button References")]
+    [SerializeField] private Button basicAttackButton;
     [SerializeField] private Button fireballButton;
+    [SerializeField] private Button focusButton;
+    [SerializeField] private Button defendButton;
 
 
     [Header("Combat Log UI")]
@@ -55,6 +59,9 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private Image turnBannerImage;
     [SerializeField] private Sprite playerTurnSprite;
     [SerializeField] private Sprite enemyTurnSprite;
+
+    [Header("Enemy Spell Effect")]
+    [SerializeField] private GameObject baseEnemySpellPrefab;
 
     private BattleState state;
 
@@ -73,6 +80,41 @@ public class CombatManager : MonoBehaviour
         else
         {
             Debug.LogWarning("No enemy data found!");
+        }
+    }
+
+    void Update()
+    {
+        if(state == BattleState.PlayerTurn)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                if (basicAttackButton.interactable) 
+                {
+                    basicAttackButton.onClick.Invoke();
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                if (fireballButton.interactable) 
+                {
+                    fireballButton.onClick.Invoke();
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                if (focusButton.interactable) 
+                {
+                    focusButton.onClick.Invoke();
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                if (defendButton.interactable) 
+                {
+                    defendButton.onClick.Invoke(); 
+                }
+            }
         }
     }
 
@@ -101,6 +143,8 @@ public class CombatManager : MonoBehaviour
             enemyWorldSpriteRenderer.flipX = data.flipSprite;
             enemyWorldSpriteRenderer.transform.position = data.combatPosition;
         }
+        enemy.transform.position = data.combatPosition;
+
         state = BattleState.PlayerTurn;
         UpdateTurnBanner(true);
         UpdateManaButtons();
@@ -337,15 +381,94 @@ public class CombatManager : MonoBehaviour
 
         enemy.SpendMana(enemy.data.specialAttackCost);
 
-        enemy.PlayAttack(); // Change this when make new Animation for special attack
+        enemyManaText.text =
+            $"MP: {enemy.GetCurrentMana()}/{enemy.data.maxManaPoints}";
 
-        yield return new WaitForSeconds(0.5f);
+        enemy.CastSpecialAttack();
+
+        yield return new WaitForSeconds(enemy.data.enemySpecialAnimationDelay);
+
+        if (baseEnemySpellPrefab == null)
+        {
+            Debug.LogError("[SPELL ERROR] Base Enemy Spell Prefab is NOT assigned!");
+            yield break;
+        }
+
+        if (enemy.data.uniqueSpellSprite == null)
+        {
+            Debug.LogError(
+                $"[SPELL ERROR] {enemy.data.enemyName} has no Unique Spell Sprite assigned!"
+            );
+            yield break;
+        }
+
+        Vector3 spawnPos = enemy.transform.position + Vector3.left * 3.0f;
+
+        GameObject spawnedSpell = Instantiate(
+            baseEnemySpellPrefab,
+            spawnPos,
+            Quaternion.identity
+        );
+
+        Debug.Log(
+            $"[SPELL] Spawned at: {spawnedSpell.transform.position}"
+        );
+
+        SpriteRenderer spellRenderer =
+            spawnedSpell.GetComponent<SpriteRenderer>();
+
+        if (spellRenderer == null)
+        {
+            Debug.LogError(
+                "[SPELL ERROR] EnemySpecial prefab has no SpriteRenderer!"
+            );
+        }
+        else
+        {
+            spellRenderer.sprite = enemy.data.uniqueSpellSprite;
+
+            spellRenderer.enabled = true;
+
+            spellRenderer.sortingOrder = 100;
+
+            Debug.Log(
+                $"[SPELL] Sprite assigned: {enemy.data.uniqueSpellSprite.name}"
+            );
+        }
+
+        spawnedSpell.SetActive(true);
+
+        float spellMoveSpeed = 15f;
+
+        while (
+            spawnedSpell != null &&
+            Vector3.Distance(
+                spawnedSpell.transform.position,
+                player.transform.position
+            ) > 0.1f
+        )
+        {
+            spawnedSpell.transform.position = Vector3.MoveTowards(
+                spawnedSpell.transform.position,
+                player.transform.position,
+                spellMoveSpeed * Time.deltaTime
+            );
+
+            yield return null;
+        }
+
+        if (spawnedSpell != null)
+        {
+            Destroy(spawnedSpell);
+        }
 
         player.TakeDamage(enemy.data.specialAttackDamage);
-        playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
+
+        playerHealthText.text =
+            $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
 
         yield return new WaitForSeconds(0.5f);
-    }
+}
 
     private IEnumerator EnemyFocusRoutine()
     {
@@ -480,14 +603,14 @@ public class CombatManager : MonoBehaviour
                                     $"Max HP: {GameManager.Instance.PlayerData.maxHealth}\n" +
                                     $"Attack: {GameManager.Instance.PlayerData.attack}\n" +
                                     $"Defense: {GameManager.Instance.PlayerData.defense}";
-            yield return new WaitForSeconds(3.5f);
+            yield return new WaitForSeconds(1.5f);
         }
         else
         {
             levelUpTitleText.text = "Victory!";
             levelUpStatsText.text = $"Gained {enemy.data.xpReward} XP\n" +
                                     $"Gained {enemy.data.goldReward} Gold";
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(1f);
         }
         SceneTransition.instance.LoadScene("Tutorial Scene");
     }
