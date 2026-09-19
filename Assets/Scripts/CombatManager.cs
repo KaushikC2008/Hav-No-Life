@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class CombatManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     private int startingPlayerHealth;
     private int startingPlayerMana;
+    private List<string> receivedRewards = new List<string>();
 
     [Header("Fireball Effect")]
     [SerializeField] private GameObject fireballSprite;
@@ -48,6 +50,14 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private Button fireballButton;
     [SerializeField] private Button focusButton;
     [SerializeField] private Button defendButton;
+
+    [Header("Combat Sub-Menus & Item UI")]
+    [SerializeField] private GameObject actionMainMenuPanel; // Your main 4 buttons panel (Attack, Skills/Fireball, Defend, Focus)
+    [SerializeField] private GameObject skillsSubMenuPanel;  // A panel that opens when clicking "Skills"
+    [SerializeField] private GameObject itemsSubMenuPanel;   // A panel that opens when clicking "Item"
+    [SerializeField] private Transform itemButtonContainer;  // Content parent for dynamic item buttons
+    [SerializeField] private GameObject combatItemButtonPrefab; // Prefab for item buttons in combat
+    
 
 
     [Header("Combat Log UI")]
@@ -124,13 +134,14 @@ public class CombatManager : MonoBehaviour
         enemy.combatManager = this;
         enemyNameText.text = data.enemyName;
 
+        startingPlayerHealth = player.GetCurrentHealth();
+        startingPlayerMana = player.GetCurrentMana();
+
         enemyHealthText.text = $"HP: {data.maxHealth}/{data.maxHealth}";
         enemyManaText.text = $"MP: {data.maxManaPoints}/{data.maxManaPoints}";
         playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
 
-        startingPlayerHealth = player.GetCurrentHealth();
-        startingPlayerMana = player.GetCurrentMana();
 
         startEnemyPosition = data.combatPosition;
         attackDistance = data.playerCombatOffset.x;
@@ -216,7 +227,7 @@ public class CombatManager : MonoBehaviour
         }
 
         // Apply damage right on impact
-        enemy.TakeDamage(player.data.attack + 2);
+        enemy.TakeDamage(player.GetTotalSpecialAttack());
         enemyHealthText.text = $"HP: {enemy.GetCurrentHP()}/{enemy.data.maxHealth}";
         enemyManaText.text = $"MP: {enemy.GetCurrentMana()}/{enemy.data.maxManaPoints}";
 
@@ -227,6 +238,8 @@ public class CombatManager : MonoBehaviour
             yield return StartCoroutine(HandleEnemyDeath());
             yield break;
         }
+
+        player.TickBuffs();
 
         StartCoroutine(EnemyTurn());
     }
@@ -275,6 +288,8 @@ public class CombatManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.75f);
 
+        player.TickBuffs();
+
         StartCoroutine(EnemyTurn());
     }
 
@@ -295,6 +310,7 @@ public class CombatManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.75f);
 
+        player.TickBuffs();
         StartCoroutine(EnemyTurn());
     }
 
@@ -309,7 +325,7 @@ public class CombatManager : MonoBehaviour
         player.PlayAttack();
         playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
         yield return new WaitForSeconds(0.5f);
-        enemy.TakeDamage(player.data.attack);
+        enemy.TakeDamage(player.GetTotalAttack());
         enemyHealthText.text = $"HP: {enemy.GetCurrentHP()}/{enemy.data.maxHealth}";
         if (enemy.GetCurrentHP() <= 0)
         {
@@ -320,6 +336,9 @@ public class CombatManager : MonoBehaviour
         yield return StartCoroutine(PlayerMoveToPosition(playerStartPosition, true));
         player.StopRun();
         yield return new WaitForSeconds(0.5f);
+
+        player.TickBuffs();
+
         StartCoroutine(EnemyTurn());
     }
 
@@ -468,7 +487,7 @@ public class CombatManager : MonoBehaviour
             $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
 
         yield return new WaitForSeconds(0.5f);
-}
+    }
 
     private IEnumerator EnemyFocusRoutine()
     {
@@ -580,39 +599,72 @@ public class CombatManager : MonoBehaviour
     {
         state = BattleState.Won;
         SetPlayerControls(false);
+
+        if (actionMainMenuPanel != null) actionMainMenuPanel.SetActive(false);
+        if (skillsSubMenuPanel != null) skillsSubMenuPanel.SetActive(false);
+        if (itemsSubMenuPanel != null) itemsSubMenuPanel.SetActive(false);
+
         if (turnBannerImage != null) turnBannerImage.gameObject.SetActive(false);
         LogMessage("Player wins!");
-        GameManager.Instance.DefeatEnemy(GameManager.Instance.CurrentEnemyID);
+        
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.DefeatEnemy(GameManager.Instance.CurrentEnemyID);
+        }
 
-        bool leveledUp = GameManager.Instance.GainXP(enemy.data.xpReward);
-        GameManager.Instance.GainGold(enemy.data.goldReward);
+        bool leveledUp = false;
+        if (GameManager.Instance != null && enemy.data != null)
+        {
+            leveledUp = GameManager.Instance.GainXP(enemy.data.xpReward);
+            GameManager.Instance.GainGold(enemy.data.goldReward);
+        }
+
+        string droppedItemsText = "";
+       if (enemy != null && enemy.data != null && DropManager.Instance != null)
+       {
+           droppedItemsText = DropManager.Instance.GiveSingleDropAndGetText(enemy.data.drops);
+       }
 
         if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
         {
             GameManager.Instance.PlayerData.latestCheckpointPosition = GameManager.Instance.LastPlayerPosition;
             GameManager.Instance.PlayerData.hasCheckpoint = true;
-            Debug.Log($"[Checkpoint] Checkpoint locked in at: {GameManager.Instance.PlayerData.latestCheckpointPosition}");
         }
 
-        levelUpPanel.SetActive(true);
+        string titleString = "";
+        string statsString = "";
 
         if (leveledUp)
         {
-            levelUpTitleText.text = $"Level Up! You are now Level {GameManager.Instance.PlayerData.currentLevel}!";
-            levelUpStatsText.text = $"Gained {enemy.data.xpReward} XP & {enemy.data.goldReward} Gold!\n\n" +
-                                    $"Max HP: {GameManager.Instance.PlayerData.maxHealth}\n" +
-                                    $"Attack: {GameManager.Instance.PlayerData.attack}\n" +
-                                    $"Defense: {GameManager.Instance.PlayerData.defense}";
-            yield return new WaitForSeconds(1.5f);
+            titleString = $"Level Up! You are now Level {GameManager.Instance.PlayerData.currentLevel}!";
+            statsString = $"Gained {enemy.data.xpReward} XP & {enemy.data.goldReward} Gold!\n" +
+                          $"Max HP: {GameManager.Instance.PlayerData.maxHealth}\n" +
+                          $"Attack: {GameManager.Instance.PlayerData.attack}\n" +
+                          $"Defense: {GameManager.Instance.PlayerData.defense}";
         }
         else
         {
-            levelUpTitleText.text = "Victory!";
-            levelUpStatsText.text = $"Gained {enemy.data.xpReward} XP\n" +
-                                    $"Gained {enemy.data.goldReward} Gold";
-            yield return new WaitForSeconds(1f);
+            titleString = "Victory!";
+            statsString = $"Gained {enemy.data.xpReward} XP\n" +
+                          $"Gained {enemy.data.goldReward} Gold";
         }
-        SceneTransition.instance.LoadScene("Tutorial Scene");
+
+        if (levelUpPanel != null)
+        {
+            VictoryUI victoryUI = levelUpPanel.GetComponent<VictoryUI>();
+            if (victoryUI != null)
+            {
+                victoryUI.DisplayVictoryData(titleString, statsString, droppedItemsText);
+            }
+            else
+            {
+                levelUpPanel.SetActive(true);
+            }
+        }
+
+        yield return new WaitForSeconds(3.0f);
+
+        ReturnToCheckpoint();
     }
 
     private void UpdateTurnBanner(bool isPlayerTurn)
@@ -657,9 +709,6 @@ public class CombatManager : MonoBehaviour
 
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.PlayerData.currentHealth = startingPlayerHealth;
-            GameManager.Instance.PlayerData.currentManaPoints = startingPlayerMana;
-
             if (GameManager.Instance.PlayerData.hasCheckpoint)
             {
                 GameManager.Instance.LastPlayerPosition = GameManager.Instance.PlayerData.latestCheckpointPosition;
@@ -681,12 +730,10 @@ public class CombatManager : MonoBehaviour
 
         if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
         {
-            // Restore health and mana back to the values they had when the battle started
             GameManager.Instance.PlayerData.currentHealth = startingPlayerHealth;
             GameManager.Instance.PlayerData.currentManaPoints = startingPlayerMana;
         }
 
-        // Reload the active scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -697,12 +744,10 @@ public class CombatManager : MonoBehaviour
 
         if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
         {
-            // Restore health and mana back to the values they had when the battle started
             GameManager.Instance.PlayerData.currentHealth = startingPlayerHealth;
             GameManager.Instance.PlayerData.currentManaPoints = startingPlayerMana;
         }
 
-        // Go to main menu using your SceneTransition or SceneManager
         if (SceneTransition.instance != null)
         {
             SceneTransition.instance.LoadScene("MainMenuScene");
@@ -738,6 +783,114 @@ public class CombatManager : MonoBehaviour
         {
             combatLogScrollRect.verticalNormalizedPosition = 0f;
         }
+    }
+
+    public void OpenItemMenu()
+{
+    if (state != BattleState.PlayerTurn) return;
+    
+    actionMainMenuPanel.SetActive(false);
+    skillsSubMenuPanel.SetActive(false);
+    itemsSubMenuPanel.SetActive(true);
+    
+    PopulateCombatItems();
+}
+
+public void OpenSkillsMenu()
+{
+    if (state != BattleState.PlayerTurn) return;
+    
+    actionMainMenuPanel.SetActive(false);
+    itemsSubMenuPanel.SetActive(false);
+    skillsSubMenuPanel.SetActive(true);
+}
+
+    public void CloseSubMenus()
+    {
+        itemsSubMenuPanel.SetActive(false);
+        skillsSubMenuPanel.SetActive(false);
+        actionMainMenuPanel.SetActive(true);
+    }
+
+    private void PopulateCombatItems()
+    {
+        foreach (Transform child in itemButtonContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (var entry in player.data.consumables)
+        {
+            if (entry.amount <= 0 || entry.item == null) continue;
+
+            GameObject btnObj = Instantiate(combatItemButtonPrefab, itemButtonContainer);
+            TextMeshProUGUI btnText = btnObj.GetComponentInChildren<TextMeshProUGUI>();
+            if (btnText != null)
+            {
+                btnText.text = $"{entry.item.itemName} (x{entry.amount})";
+            }
+
+            Button btn = btnObj.GetComponent<Button>();
+            ConsumableData currentItem = entry.item;
+
+            bool canUse = true;
+
+            if (currentItem.effectType == ConsumableEffectType.Heal)
+            {
+                if (player.GetCurrentHealth() >= player.GetMaxHealth())
+                {
+                    canUse = false;
+                }
+            }
+            else if (currentItem.effectType == ConsumableEffectType.RestoreMana)
+            {
+                if (player.GetCurrentMana() >= player.GetMaxManaPoints())
+                {
+                    canUse = false;
+                }
+            }
+
+            btn.interactable = canUse;
+            if (canUse)
+            {
+                btn.onClick.AddListener(() => UseCombatItem(currentItem));
+            }
+            else
+            {
+                if (btnText != null)
+                {
+                    btnText.text += " (Full)";
+                }
+            }
+        }
+}
+
+    private void UseCombatItem(ConsumableData item)
+    {
+        player.UseConsumable(item);
+        
+        var entry = player.data.consumables.Find(x => x.item == item);
+        if (entry != null)
+        {
+            entry.amount--;
+            if (entry.amount <= 0)
+            {
+                player.data.consumables.Remove(entry);
+            }
+        }
+
+        LogMessage($"Used {item.itemName} in combat!");
+        CloseSubMenus();
+        
+        StartCoroutine(ItemTurnRoutine());
+    }
+
+    private IEnumerator ItemTurnRoutine()
+    {
+        state = BattleState.Busy;
+        SetPlayerControls(false);
+        yield return new WaitForSeconds(0.75f);
+        StartCoroutine(EnemyTurn());
     }
 }
 

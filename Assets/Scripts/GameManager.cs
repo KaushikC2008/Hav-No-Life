@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Player")]
     public PlayerData PlayerData;
-
     public EnemyData CurrentEnemy { get; private set; }
     public List<string> DefeatedEnemies = new List<string>();
     public string CurrentEnemyID;
@@ -141,7 +140,6 @@ public class GameManager : MonoBehaviour
         PlayerData.currentManaPoints = PlayerData.maxManaPoints;
         PlayerData.attack += 5;
         PlayerData.defense += 2;
-        PlayerData.speed += 5;
 
         Debug.Log($"Leveled up to Level {PlayerData.currentLevel}! Attack and Defense increased!");
     }

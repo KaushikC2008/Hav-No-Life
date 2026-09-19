@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "NewEnemyData", menuName = "ScriptableObjects/EnemyData")]
 public class EnemyData : ScriptableObject
@@ -30,5 +31,8 @@ public class EnemyData : ScriptableObject
     public float enemySpecialAnimationDelay;
     public int specialAttackCost;
     public Sprite uniqueSpellSprite;
-    public int specialAttackDamage => Mathf.RoundToInt(attack * 1.5f); // Example: Special attack deals 1.5x base attack damage
+    public int specialAttackDamage => Mathf.RoundToInt(attack * 1.5f);
+
+    [Header("Drops")]
+    public List<DropData> drops;
 }

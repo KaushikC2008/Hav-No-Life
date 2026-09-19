@@ -98,4 +98,41 @@ public class EnemyCharacter : MonoBehaviour
     {
          animator.SetBool("Run",false);
     }
+
+    private void GiveDrops()
+    {
+        Debug.Log("===== ENEMY GIVE DROPS CALLED =====");
+        if (data == null)
+        {
+            Debug.LogError("EnemyCharacter: data is NULL.");
+            return;
+        }
+
+        if (data.drops == null)
+        {
+            Debug.LogError(data.enemyName + ": drops list is NULL.");
+            return;
+        }
+
+        if (data.drops.Count == 0)
+        {
+            Debug.LogWarning(data.enemyName + ": drops list is EMPTY.");
+            return;
+        }
+
+        if (DropManager.Instance == null)
+        {
+            Debug.LogError("EnemyCharacter: DropManager.Instance is NULL.");
+            return;
+        }
+
+        Debug.Log(
+            data.enemyName +
+            " is giving " +
+            data.drops.Count +
+            " drop(s)."
+        );
+
+        DropManager.Instance.GiveDrops(data.drops);
+    }
 }

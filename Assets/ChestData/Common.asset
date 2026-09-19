@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8ade75f2cb14d7ba9a3e36395381d1, type: 3}
+  m_Name: Common
+  m_EditorClassIdentifier: Assembly-CSharp::ChestData
+  chestTypeName: Common Chest
+  animatorController: {fileID: 9100000, guid: e9088c60e62f04d6cb6fc54db3c4c08c, type: 2}
+  drops:
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: aab2e42191be949c39eee0993b62e406, type: 2}
+    dropChance: 75
+    minAmount: 3
+    maxAmount: 5
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: 8dbfe27fa32334306b0c9c0f1c1b8a08, type: 2}
+    dropChance: 70
+    minAmount: 2
+    maxAmount: 4
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: 03c34014b78e5480ba47d0a66f0f8ea3, type: 2}
+    dropChance: 50
+    minAmount: 1
+    maxAmount: 3
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: e94fde12463ab4376974389f65337d35, type: 2}
+    dropChance: 55
+    minAmount: 1
+    maxAmount: 3
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: dac21972ce458411486df49f261955f5, type: 2}
+    dropChance: 50
+    minAmount: 1
+    maxAmount: 2
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: b50e03d2ab59b4d7aa9a8e93d80aef82, type: 2}
+    dropChance: 5
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: cf974c16c4e9548f1be47a86c970c102, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 30
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 98b2abd0b407140d79441fc3eab4d8cb, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 25
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 89957da7de80142c7ace1e884861bf04, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 20
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 454ad2df07eae4650aeee65f8446580c, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 15
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 3013f7c2053bb4360be71beb386266c3, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 13
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 45ec4efcd7fee43298ef97818f55e7d9, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 12.5
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 883b63fd33f96410c8cb6acf8ab41439, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 10
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: c8e87884f29684c53bbaf90884dd841e, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 5
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 214874f88994d4eae8fc8f3f02c865ce, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 2.5
+    minAmount: 1
+    maxAmount: 1

@@ -8,6 +8,7 @@ public class PlayerData : ScriptableObject
     [Header("Base Info")]
     public string playerName;
     public Sprite combatSprite;
+    public EquipmentData equipmentData = new EquipmentData();
 
     [Header("Leveling")]
     public int currentLevel = 1;
@@ -24,10 +25,37 @@ public class PlayerData : ScriptableObject
     public int currentManaPoints;
     public int attack;
     public int defense;
-    public float speed;
+
+    [Header("Special Attack")]
+    public int baseSpecialAttack = 15;
+    public int specialAttack => baseSpecialAttack + (currentLevel * 5);
 
     [Header("Overworld & Checkpoints")]
     public Vector3 overworldReturnPosition;
     public Vector3 latestCheckpointPosition;
     public bool hasCheckpoint = false;
+
+    [Header("Inventory")]
+    public List<ConsumableEntry> consumables = new List<ConsumableEntry>();
+    public List<Accessaries> ownedAccessories = new List<Accessaries>();
+
+}
+[System.Serializable]
+public class EquipmentData
+{
+    public Accessaries equippedAccessory1;
+    public Accessaries equippedAccessory2;
+    public Accessaries equippedAccessory3;
+    public Accessaries equippedAccessory4;
+    public Accessaries equippedAccessory5;
+
+    public bool isAccessory3Unlocked = false;
+    public bool isAccessory4Unlocked = false;
+    public bool isAccessory5Unlocked = false;
+}
+[System.Serializable]
+public class ConsumableEntry
+{
+    public ConsumableData item;
+    public int amount;
 }

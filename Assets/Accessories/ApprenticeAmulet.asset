@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0169ef65cd842e7b997e50c3a1fb65, type: 3}
+  m_Name: ApprenticeAmulet
+  m_EditorClassIdentifier: Assembly-CSharp::Accessaries
+  accessoryName: Apprentice Amulet
+  icon: {fileID: 0}
+  description: Unlocks deep arcane reservoirs, though physical constitution suffers
+    greatly from the magical strain.
+  attackBonus: -5
+  defenseBonus: -10
+  maxHealthBonus: -15
+  maxManaBonus: 50
+  specialAttackBonus: 12

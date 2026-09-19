@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Player
   combatSprite: {fileID: -863821437, guid: f0c03546cb5c84c3a93899030f3151ed, type: 3}
+  equipmentData:
+    equippedAccessory1: {fileID: 0}
+    equippedAccessory2: {fileID: 0}
+    equippedAccessory3: {fileID: 0}
+    equippedAccessory4: {fileID: 0}
+    equippedAccessory5: {fileID: 0}
+    isAccessory3Unlocked: 0
+    isAccessory4Unlocked: 0
+    isAccessory5Unlocked: 0
   currentLevel: 1
   currentXP: 0
   xpToNextLevel: 100
@@ -24,4 +33,9 @@ MonoBehaviour:
   currentManaPoints: 0
   attack: 20
   defense: 10
-  speed: 10
+  baseSpecialAttack: 20
+  overworldReturnPosition: {x: 0, y: 0, z: 0}
+  latestCheckpointPosition: {x: 0, y: 0, z: 0}
+  hasCheckpoint: 0
+  consumables: []
+  ownedAccessories: []

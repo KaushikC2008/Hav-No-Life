@@ -15,7 +15,6 @@ public class GameMenuController : MonoBehaviour
 
     void Update()
     {
-        // Only trigger pause menu with Escape during normal gameplay
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)

@@ -25,6 +25,13 @@ MonoBehaviour:
   combatPosition: {x: 7.44, y: -1.1}
   playerCombatOffset: {x: 5, y: 0}
   maxManaPoints: 30
-  enemySpecialAnimationDelay: 0
+  enemySpecialAnimationDelay: 0.5
   specialAttackCost: 15
-  uniqueSpellSprite: {fileID: 5878760218143786555, guid: 6b073ee910673452f90c3e2e329b8964, type: 3}
+  uniqueSpellSprite: {fileID: 8805291205847054552, guid: 420782e419e454b9fb4ba5f0164dffe2, type: 3}
+  drops:
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: f51cbdeeb58f04ea797bfcdf39008bdc, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 100
+    minAmount: 0
+    maxAmount: 0

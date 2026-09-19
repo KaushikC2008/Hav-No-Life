@@ -28,3 +28,64 @@ MonoBehaviour:
   enemySpecialAnimationDelay: 0.6
   specialAttackCost: 7
   uniqueSpellSprite: {fileID: 191230747030899900, guid: d3a40741850614c9f89ad8486b09dddf, type: 3}
+  drops:
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: aab2e42191be949c39eee0993b62e406, type: 2}
+    dropChance: 75
+    minAmount: 1
+    maxAmount: 3
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: 8dbfe27fa32334306b0c9c0f1c1b8a08, type: 2}
+    dropChance: 60
+    minAmount: 1
+    maxAmount: 3
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: e94fde12463ab4376974389f65337d35, type: 2}
+    dropChance: 27
+    minAmount: 1
+    maxAmount: 2
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: 03c34014b78e5480ba47d0a66f0f8ea3, type: 2}
+    dropChance: 20
+    minAmount: 1
+    maxAmount: 2
+  - dropType: 1
+    accessory: {fileID: 0}
+    consumable: {fileID: 11400000, guid: dac21972ce458411486df49f261955f5, type: 2}
+    dropChance: 20
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: f51cbdeeb58f04ea797bfcdf39008bdc, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 5
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: cf974c16c4e9548f1be47a86c970c102, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 4.5
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 98b2abd0b407140d79441fc3eab4d8cb, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 3.5
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 89957da7de80142c7ace1e884861bf04, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 2.5
+    minAmount: 1
+    maxAmount: 1
+  - dropType: 0
+    accessory: {fileID: 11400000, guid: 454ad2df07eae4650aeee65f8446580c, type: 2}
+    consumable: {fileID: 0}
+    dropChance: 2
+    minAmount: 1
+    maxAmount: 1

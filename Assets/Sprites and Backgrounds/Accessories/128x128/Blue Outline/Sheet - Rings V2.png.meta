@@ -1,0 +1,1690 @@
+fileFormatVersion: 2
+guid: f4fcc3b1a0dd3493a8e27775f4b53cd2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1595717250039180530
+    second: Sheet - Rings V2_0
+  - first:
+      213: -4590485800099909724
+    second: Sheet - Rings V2_1
+  - first:
+      213: 2945251102843853762
+    second: Sheet - Rings V2_2
+  - first:
+      213: -2192050340009818085
+    second: Sheet - Rings V2_3
+  - first:
+      213: -7187121858450336884
+    second: Sheet - Rings V2_4
+  - first:
+      213: 9117250207681031935
+    second: Sheet - Rings V2_5
+  - first:
+      213: 9050314951589295231
+    second: Sheet - Rings V2_6
+  - first:
+      213: 8809907299869264276
+    second: Sheet - Rings V2_7
+  - first:
+      213: -6426811833861775218
+    second: Sheet - Rings V2_8
+  - first:
+      213: 7297447743449918105
+    second: Sheet - Rings V2_9
+  - first:
+      213: -6508690733071251917
+    second: Sheet - Rings V2_10
+  - first:
+      213: 4314452793222201433
+    second: Sheet - Rings V2_11
+  - first:
+      213: 1319204015480661597
+    second: Sheet - Rings V2_12
+  - first:
+      213: 6528794273530514655
+    second: Sheet - Rings V2_13
+  - first:
+      213: -2799648576848482960
+    second: Sheet - Rings V2_14
+  - first:
+      213: 6260104436926940146
+    second: Sheet - Rings V2_15
+  - first:
+      213: -267150288842127040
+    second: Sheet - Rings V2_16
+  - first:
+      213: 3911038825806186140
+    second: Sheet - Rings V2_17
+  - first:
+      213: -3044545981005387707
+    second: Sheet - Rings V2_18
+  - first:
+      213: 4319404069248937802
+    second: Sheet - Rings V2_19
+  - first:
+      213: -6888871906590996385
+    second: Sheet - Rings V2_20
+  - first:
+      213: -488948234803926458
+    second: Sheet - Rings V2_21
+  - first:
+      213: 5303624634326421859
+    second: Sheet - Rings V2_22
+  - first:
+      213: -627045050896141660
+    second: Sheet - Rings V2_23
+  - first:
+      213: -4146891719968049298
+    second: Sheet - Rings V2_24
+  - first:
+      213: -5590116464128541508
+    second: Sheet - Rings V2_25
+  - first:
+      213: 5634767020243864120
+    second: Sheet - Rings V2_26
+  - first:
+      213: -617636041000855778
+    second: Sheet - Rings V2_27
+  - first:
+      213: -5760981249975295847
+    second: Sheet - Rings V2_28
+  - first:
+      213: 4959906016220260262
+    second: Sheet - Rings V2_29
+  - first:
+      213: -8681285144875193275
+    second: Sheet - Rings V2_30
+  - first:
+      213: 932920665726095872
+    second: Sheet - Rings V2_31
+  - first:
+      213: -7835266968729712209
+    second: Sheet - Rings V2_32
+  - first:
+      213: 4142591594337530811
+    second: Sheet - Rings V2_33
+  - first:
+      213: -4493507561760242191
+    second: Sheet - Rings V2_34
+  - first:
+      213: 782053510716616742
+    second: Sheet - Rings V2_35
+  - first:
+      213: -971360110259390355
+    second: Sheet - Rings V2_36
+  - first:
+      213: -3230095584319638315
+    second: Sheet - Rings V2_37
+  - first:
+      213: -4870720528911739444
+    second: Sheet - Rings V2_38
+  - first:
+      213: 5955501741849691947
+    second: Sheet - Rings V2_39
+  - first:
+      213: -1645558109185974582
+    second: Sheet - Rings V2_40
+  - first:
+      213: 7781917125941484679
+    second: Sheet - Rings V2_41
+  - first:
+      213: -7397515226481343991
+    second: Sheet - Rings V2_42
+  - first:
+      213: -7081495867584884442
+    second: Sheet - Rings V2_43
+  - first:
+      213: 919638010263637951
+    second: Sheet - Rings V2_44
+  - first:
+      213: 3411879894277468659
+    second: Sheet - Rings V2_45
+  - first:
+      213: -9135114822060451949
+    second: Sheet - Rings V2_46
+  - first:
+      213: 4410623391026436240
+    second: Sheet - Rings V2_47
+  - first:
+      213: 396204187191672594
+    second: Sheet - Rings V2_48
+  - first:
+      213: -8152272909781850363
+    second: Sheet - Rings V2_49
+  - first:
+      213: -2956771756395168836
+    second: Sheet - Rings V2_50
+  - first:
+      213: -1799282909190169032
+    second: Sheet - Rings V2_51
+  - first:
+      213: -4635141497962016377
+    second: Sheet - Rings V2_52
+  - first:
+      213: -2355114594923317438
+    second: Sheet - Rings V2_53
+  - first:
+      213: 813646820507776786
+    second: Sheet - Rings V2_54
+  - first:
+      213: -4836997815452560757
+    second: Sheet - Rings V2_55
+  - first:
+      213: 7287461395435210299
+    second: Sheet - Rings V2_56
+  - first:
+      213: 3530348350106338915
+    second: Sheet - Rings V2_57
+  - first:
+      213: -726762098934004783
+    second: Sheet - Rings V2_58
+  - first:
+      213: 6783331225561212002
+    second: Sheet - Rings V2_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sheet - Rings V2_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 907
+        width: 89
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0393759d9fdad9e0800000000000000
+      internalID: -1595717250039180530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 904
+        width: 81
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afe19a7c715b40c0800000000000000
+      internalID: -4590485800099909724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_2
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 907
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbd55ff542afd820800000000000000
+      internalID: 2945251102843853762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_3
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 908
+        width: 92
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18c0f964d54491e0800000000000000
+      internalID: -2192050340009818085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 911
+        width: 86
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c835f9dafb6324c90800000000000000
+      internalID: -7187121858450336884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_5
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 913
+        width: 80
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe2f2532caf68e70800000000000000
+      internalID: 9117250207681031935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_6
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 910
+        width: 82
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74f2e27f7d299d70800000000000000
+      internalID: 9050314951589295231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_7
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 914
+        width: 81
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49904d82304134a70800000000000000
+      internalID: 8809907299869264276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 777
+        width: 88
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80646410b06fc6a0800000000000000
+      internalID: -6426811833861775218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 778
+        width: 85
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99aee432f0eb54560800000000000000
+      internalID: 7297447743449918105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_10
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 790
+        width: 80
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3364966434c7ca5a0800000000000000
+      internalID: -6508690733071251917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_11
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 788
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950833cd4f300eb30800000000000000
+      internalID: 4314452793222201433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_12
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 790
+        width: 78
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d566ef80011ce4210800000000000000
+      internalID: 1319204015480661597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_13
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 785
+        width: 79
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc046dfccfea9a50800000000000000
+      internalID: 6528794273530514655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_14
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 788
+        width: 82
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07da409d376a529d0800000000000000
+      internalID: -2799648576848482960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_15
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 785
+        width: 82
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f380e361db50e650800000000000000
+      internalID: 6260104436926940146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_16
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 658
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0490ceb4a34ea4cf0800000000000000
+      internalID: -267150288842127040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_17
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 660
+        width: 80
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9640fa271dc64630800000000000000
+      internalID: 3911038825806186140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_18
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 660
+        width: 80
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548a4db9f899fb5d0800000000000000
+      internalID: -3044545981005387707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_19
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 658
+        width: 81
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fa5f4ad1b91fb30800000000000000
+      internalID: 4319404069248937802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_20
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 650
+        width: 87
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58c970ff7fc560a0800000000000000
+      internalID: -6888871906590996385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_21
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 652
+        width: 90
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a25f6cb28e639f0800000000000000
+      internalID: -488948234803926458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_22
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 648
+        width: 90
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361990f41824a9940800000000000000
+      internalID: 5303624634326421859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_23
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 648
+        width: 86
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a23b2339d94c47f0800000000000000
+      internalID: -627045050896141660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_24
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 517
+        width: 85
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67bb4da3f74376c0800000000000000
+      internalID: -4146891719968049298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_25
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 519
+        width: 90
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc3e8e81baeb62b0800000000000000
+      internalID: -5590116464128541508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_26
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 517
+        width: 87
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ac8b920c6b23e40800000000000000
+      internalID: 5634767020243864120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_27
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 519
+        width: 90
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e175aa70b47bd67f0800000000000000
+      internalID: -617636041000855778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_28
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 522
+        width: 92
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990698d7312ec00b0800000000000000
+      internalID: -5760981249975295847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_29
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 523
+        width: 89
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7a1283e3025d440800000000000000
+      internalID: 4959906016220260262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_30
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 523
+        width: 88
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ca6d9f721e58780800000000000000
+      internalID: -8681285144875193275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_31
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 525
+        width: 89
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0029934176662fc00800000000000000
+      internalID: 932920665726095872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_32
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 392
+        width: 92
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa98388743a834390800000000000000
+      internalID: -7835266968729712209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_33
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 396
+        width: 89
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3f10e4b117d7930800000000000000
+      internalID: 4142591594337530811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_34
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 396
+        width: 90
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5cfb12eaad3a1c0800000000000000
+      internalID: -4493507561760242191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_35
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 396
+        width: 89
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6207c9546896ada00800000000000000
+      internalID: 782053510716616742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_36
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 396
+        width: 90
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68310f40290582f0800000000000000
+      internalID: -971360110259390355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_37
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 397
+        width: 88
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4f11a0e256c23d0800000000000000
+      internalID: -3230095584319638315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_38
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 396
+        width: 90
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc553023c79b76cb0800000000000000
+      internalID: -4870720528911739444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_39
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 396
+        width: 90
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27cb26d74136a250800000000000000
+      internalID: 5955501741849691947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_40
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 263
+        width: 92
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aced4b44e9dc929e0800000000000000
+      internalID: -1645558109185974582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_41
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 263
+        width: 90
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c554b456ceefb60800000000000000
+      internalID: 7781917125941484679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_42
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 264
+        width: 92
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9024901681fb65990800000000000000
+      internalID: -7397515226481343991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_43
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 262
+        width: 90
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621d43e170979bd90800000000000000
+      internalID: -7081495867584884442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_44
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 263
+        width: 92
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf06bbd5e533cc00800000000000000
+      internalID: 919638010263637951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_45
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 263
+        width: 91
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1b4badfae695f20800000000000000
+      internalID: 3411879894277468659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_46
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 263
+        width: 90
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3975ea0287d893180800000000000000
+      internalID: -9135114822060451949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_47
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 261
+        width: 91
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098d82c0b9ea53d30800000000000000
+      internalID: 4410623391026436240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_48
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 135
+        width: 92
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ff41ceb999f7500800000000000000
+      internalID: 396204187191672594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_49
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 136
+        width: 90
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 507a96c2bfe4dde80800000000000000
+      internalID: -8152272909781850363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_50
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 133
+        width: 97
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb7822d0cf67f6d0800000000000000
+      internalID: -2956771756395168836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_51
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 133
+        width: 98
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ed9432ab9a707e0800000000000000
+      internalID: -1799282909190169032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_52
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 134
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7815d4a9d5bacafb0800000000000000
+      internalID: -4635141497962016377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_53
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 133
+        width: 97
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247f14cf0c3f05fd0800000000000000
+      internalID: -2355114594923317438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_54
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 134
+        width: 101
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217fdfce877aa4b00800000000000000
+      internalID: 813646820507776786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_55
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 136
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b821c964d188fdcb0800000000000000
+      internalID: -4836997815452560757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_56
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 4
+        width: 104
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36c94d4783422560800000000000000
+      internalID: 7287461395435210299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_57
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 8
+        width: 97
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366897dae115ef030800000000000000
+      internalID: 3530348350106338915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_58
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 6
+        width: 101
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d342d8b8b50ae5f0800000000000000
+      internalID: -726762098934004783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sheet - Rings V2_59
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 4
+        width: 100
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264246d5fcb332e50800000000000000
+      internalID: 6783331225561212002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sheet - Rings V2_0: -1595717250039180530
+      Sheet - Rings V2_1: -4590485800099909724
+      Sheet - Rings V2_10: -6508690733071251917
+      Sheet - Rings V2_11: 4314452793222201433
+      Sheet - Rings V2_12: 1319204015480661597
+      Sheet - Rings V2_13: 6528794273530514655
+      Sheet - Rings V2_14: -2799648576848482960
+      Sheet - Rings V2_15: 6260104436926940146
+      Sheet - Rings V2_16: -267150288842127040
+      Sheet - Rings V2_17: 3911038825806186140
+      Sheet - Rings V2_18: -3044545981005387707
+      Sheet - Rings V2_19: 4319404069248937802
+      Sheet - Rings V2_2: 2945251102843853762
+      Sheet - Rings V2_20: -6888871906590996385
+      Sheet - Rings V2_21: -488948234803926458
+      Sheet - Rings V2_22: 5303624634326421859
+      Sheet - Rings V2_23: -627045050896141660
+      Sheet - Rings V2_24: -4146891719968049298
+      Sheet - Rings V2_25: -5590116464128541508
+      Sheet - Rings V2_26: 5634767020243864120
+      Sheet - Rings V2_27: -617636041000855778
+      Sheet - Rings V2_28: -5760981249975295847
+      Sheet - Rings V2_29: 4959906016220260262
+      Sheet - Rings V2_3: -2192050340009818085
+      Sheet - Rings V2_30: -8681285144875193275
+      Sheet - Rings V2_31: 932920665726095872
+      Sheet - Rings V2_32: -7835266968729712209
+      Sheet - Rings V2_33: 4142591594337530811
+      Sheet - Rings V2_34: -4493507561760242191
+      Sheet - Rings V2_35: 782053510716616742
+      Sheet - Rings V2_36: -971360110259390355
+      Sheet - Rings V2_37: -3230095584319638315
+      Sheet - Rings V2_38: -4870720528911739444
+      Sheet - Rings V2_39: 5955501741849691947
+      Sheet - Rings V2_4: -7187121858450336884
+      Sheet - Rings V2_40: -1645558109185974582
+      Sheet - Rings V2_41: 7781917125941484679
+      Sheet - Rings V2_42: -7397515226481343991
+      Sheet - Rings V2_43: -7081495867584884442
+      Sheet - Rings V2_44: 919638010263637951
+      Sheet - Rings V2_45: 3411879894277468659
+      Sheet - Rings V2_46: -9135114822060451949
+      Sheet - Rings V2_47: 4410623391026436240
+      Sheet - Rings V2_48: 396204187191672594
+      Sheet - Rings V2_49: -8152272909781850363
+      Sheet - Rings V2_5: 9117250207681031935
+      Sheet - Rings V2_50: -2956771756395168836
+      Sheet - Rings V2_51: -1799282909190169032
+      Sheet - Rings V2_52: -4635141497962016377
+      Sheet - Rings V2_53: -2355114594923317438
+      Sheet - Rings V2_54: 813646820507776786
+      Sheet - Rings V2_55: -4836997815452560757
+      Sheet - Rings V2_56: 7287461395435210299
+      Sheet - Rings V2_57: 3530348350106338915
+      Sheet - Rings V2_58: -726762098934004783
+      Sheet - Rings V2_59: 6783331225561212002
+      Sheet - Rings V2_6: 9050314951589295231
+      Sheet - Rings V2_7: 8809907299869264276
+      Sheet - Rings V2_8: -6426811833861775218
+      Sheet - Rings V2_9: 7297447743449918105
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

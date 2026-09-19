@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: a7887698645b740d9880dac1888b5d50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6767696840662173189
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_0
+  - first:
+      213: -72613186479809174
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_1
+  - first:
+      213: -2688596417573595100
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_2
+  - first:
+      213: 2979975136564843392
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_3
+  - first:
+      213: 5075649432022906627
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_4
+  - first:
+      213: -769254510032303111
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_5
+  - first:
+      213: -8782598116351900549
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_6
+  - first:
+      213: 541852884666808160
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_7
+  - first:
+      213: -4112302209760629019
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_8
+  - first:
+      213: -6094070972612572764
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_9
+  - first:
+      213: -116307920071445273
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_10
+  - first:
+      213: 2715524710765739994
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_11
+  - first:
+      213: -7393126119757830028
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_12
+  - first:
+      213: -7198324608665511081
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_13
+  - first:
+      213: 1384647485294296546
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_14
+  - first:
+      213: 937892257234791827
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_15
+  - first:
+      213: 7066114824952668435
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_16
+  - first:
+      213: -2782109701228444796
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_17
+  - first:
+      213: 8740155669729553734
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_18
+  - first:
+      213: 3825521483417065346
+    second: pixellab-A-lot-of-different-types-of-ri-1787106423058_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 204
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf93cc8849f4412a0800000000000000
+      internalID: -6767696840662173189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 204
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d9cdd01b60efef0800000000000000
+      internalID: -72613186479809174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 204
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42853229dcf20bad0800000000000000
+      internalID: -2688596417573595100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 204
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083917e199ffa5920800000000000000
+      internalID: 2979975136564843392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 204
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30773283444507640800000000000000
+      internalID: 5075649432022906627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 151
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb48ab491f0355f0800000000000000
+      internalID: -769254510032303111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_6
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 150
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7484dd9b81fd1680800000000000000
+      internalID: -8782598116351900549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_7
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 151
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067f517e35c058700800000000000000
+      internalID: 541852884666808160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_8
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 150
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eee92a9dea2ee6c0800000000000000
+      internalID: -4112302209760629019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_9
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 150
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a98869fcb28d6ba0800000000000000
+      internalID: -6094070972612572764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 68
+        width: 45
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4b39b109ac26ef0800000000000000
+      internalID: -116307920071445273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 68
+        width: 49
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adfbcf3465b7fa520800000000000000
+      internalID: 2715524710765739994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 68
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4782c2ce6f6566990800000000000000
+      internalID: -7393126119757830028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_13
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 67
+        width: 50
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b1a8228e96a1c90800000000000000
+      internalID: -7198324608665511081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_14
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 71
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edba1c3d81473310800000000000000
+      internalID: 1384647485294296546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39da11ee900140d00800000000000000
+      internalID: 937892257234791827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 4
+        width: 49
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311ec63def1ef0260800000000000000
+      internalID: 7066114824952668435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_17
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 3
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4834c1c87f5f369d0800000000000000
+      internalID: -2782109701228444796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_18
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 4
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64da8d736454b4970800000000000000
+      internalID: 8740155669729553734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixellab-A-lot-of-different-types-of-ri-1787106423058_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 6
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28713bb458bf61530800000000000000
+      internalID: 3825521483417065346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_0: -6767696840662173189
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_1: -72613186479809174
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_10: -116307920071445273
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_11: 2715524710765739994
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_12: -7393126119757830028
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_13: -7198324608665511081
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_14: 1384647485294296546
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_15: 937892257234791827
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_16: 7066114824952668435
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_17: -2782109701228444796
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_18: 8740155669729553734
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_19: 3825521483417065346
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_2: -2688596417573595100
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_3: 2979975136564843392
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_4: 5075649432022906627
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_5: -769254510032303111
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_6: -8782598116351900549
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_7: 541852884666808160
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_8: -4112302209760629019
+      pixellab-A-lot-of-different-types-of-ri-1787106423058_9: -6094070972612572764
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

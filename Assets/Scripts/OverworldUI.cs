@@ -15,7 +15,6 @@ public class OverworldUI : MonoBehaviour
 
     public void UpdateGoldDisplay()
     {
-        // Check if the GameManager and PlayerData exist before trying to read them
         if (GameManager.Instance != null && GameManager.Instance.PlayerData != null)
         {
             goldText.text = $"Gold: {GameManager.Instance.PlayerData.currentGold}";
