@@ -877,6 +877,15 @@ public void OpenSkillsMenu()
             {
                 player.data.consumables.Remove(entry);
             }
+
+            if(item.effectType == ConsumableEffectType.Heal)
+            {
+                playerHealthText.text = $"HP: {player.GetCurrentHealth()}/{player.data.maxHealth}";
+            }
+            else if(item.effectType == ConsumableEffectType.RestoreMana)
+            {
+                playerManaText.text = $"MP: {player.GetCurrentMana()}/{player.data.maxManaPoints}";
+            }
         }
 
         LogMessage($"Used {item.itemName} in combat!");
